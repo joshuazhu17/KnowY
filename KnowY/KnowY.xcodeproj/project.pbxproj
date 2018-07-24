@@ -8,20 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		428165832106564F00ADCC9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165822106564F00ADCC9D /* AppDelegate.swift */; };
-		428165852106564F00ADCC9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165842106564F00ADCC9D /* ViewController.swift */; };
 		428165882106564F00ADCC9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428165862106564F00ADCC9D /* Main.storyboard */; };
 		4281658A2106565D00ADCC9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428165892106565D00ADCC9D /* Assets.xcassets */; };
 		4281658D2106565D00ADCC9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4281658B2106565D00ADCC9D /* LaunchScreen.storyboard */; };
+		4281659E2106754600ADCC9D /* GoalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281659D2106754600ADCC9D /* GoalTableViewController.swift */; };
+		428165A02106759300ADCC9D /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281659F2106759300ADCC9D /* GoalTableViewCell.swift */; };
+		428165A22106793C00ADCC9D /* DetailedGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165A12106793C00ADCC9D /* DetailedGoalViewController.swift */; };
+		428165A52106813100ADCC9D /* KnowY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 428165A32106813100ADCC9D /* KnowY.xcdatamodeld */; };
+		428165A72106834300ADCC9D /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165A62106834300ADCC9D /* CoreDataHelper.swift */; };
+		428165A921078A2100ADCC9D /* EditGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165A821078A2000ADCC9D /* EditGoalViewController.swift */; };
+		428165AB21078A8A00ADCC9D /* NewTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165AA21078A8A00ADCC9D /* NewTimerViewController.swift */; };
+		428165AD21078AB100ADCC9D /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165AC21078AB100ADCC9D /* CountdownViewController.swift */; };
+		428165AF21078AC700ADCC9D /* ReflectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165AE21078AC700ADCC9D /* ReflectionTableViewController.swift */; };
+		428165B121078AF000ADCC9D /* DetailedReflectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165B021078AF000ADCC9D /* DetailedReflectionViewController.swift */; };
+		428165B321078B0100ADCC9D /* EditReflectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165B221078B0100ADCC9D /* EditReflectionViewController.swift */; };
+		428165B521078B2400ADCC9D /* ReflectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165B421078B2400ADCC9D /* ReflectionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4281657F2106564F00ADCC9D /* KnowY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428165822106564F00ADCC9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		428165842106564F00ADCC9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		428165872106564F00ADCC9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		428165892106565D00ADCC9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4281658C2106565D00ADCC9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4281658E2106565D00ADCC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4281659D2106754600ADCC9D /* GoalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewController.swift; sourceTree = "<group>"; };
+		4281659F2106759300ADCC9D /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
+		428165A12106793C00ADCC9D /* DetailedGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedGoalViewController.swift; sourceTree = "<group>"; };
+		428165A42106813100ADCC9D /* KnowY.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KnowY.xcdatamodel; sourceTree = "<group>"; };
+		428165A62106834300ADCC9D /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		428165A821078A2000ADCC9D /* EditGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalViewController.swift; sourceTree = "<group>"; };
+		428165AA21078A8A00ADCC9D /* NewTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimerViewController.swift; sourceTree = "<group>"; };
+		428165AC21078AB100ADCC9D /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
+		428165AE21078AC700ADCC9D /* ReflectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionTableViewController.swift; sourceTree = "<group>"; };
+		428165B021078AF000ADCC9D /* DetailedReflectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedReflectionViewController.swift; sourceTree = "<group>"; };
+		428165B221078B0100ADCC9D /* EditReflectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReflectionViewController.swift; sourceTree = "<group>"; };
+		428165B421078B2400ADCC9D /* ReflectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +76,89 @@
 		428165812106564F00ADCC9D /* KnowY */ = {
 			isa = PBXGroup;
 			children = (
+				4281659B2106713400ADCC9D /* Storyboards */,
+				428165942106708800ADCC9D /* Models */,
+				42816598210670BF00ADCC9D /* Views */,
+				42816599210670C800ADCC9D /* Controllers */,
+				42816596210670A800ADCC9D /* Helpers */,
+				42816597210670B800ADCC9D /* Services */,
+				4281659C2106714000ADCC9D /* Supporting */,
+				4281659A210670D800ADCC9D /* Extensions */,
 				428165822106564F00ADCC9D /* AppDelegate.swift */,
-				428165842106564F00ADCC9D /* ViewController.swift */,
-				428165862106564F00ADCC9D /* Main.storyboard */,
+				428165A32106813100ADCC9D /* KnowY.xcdatamodeld */,
 				428165892106565D00ADCC9D /* Assets.xcassets */,
 				4281658B2106565D00ADCC9D /* LaunchScreen.storyboard */,
 				4281658E2106565D00ADCC9D /* Info.plist */,
 			);
 			path = KnowY;
+			sourceTree = "<group>";
+		};
+		428165942106708800ADCC9D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		42816596210670A800ADCC9D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				428165A62106834300ADCC9D /* CoreDataHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		42816597210670B800ADCC9D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		42816598210670BF00ADCC9D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4281659F2106759300ADCC9D /* GoalTableViewCell.swift */,
+				428165B421078B2400ADCC9D /* ReflectionTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		42816599210670C800ADCC9D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4281659D2106754600ADCC9D /* GoalTableViewController.swift */,
+				428165A12106793C00ADCC9D /* DetailedGoalViewController.swift */,
+				428165A821078A2000ADCC9D /* EditGoalViewController.swift */,
+				428165AA21078A8A00ADCC9D /* NewTimerViewController.swift */,
+				428165AC21078AB100ADCC9D /* CountdownViewController.swift */,
+				428165AE21078AC700ADCC9D /* ReflectionTableViewController.swift */,
+				428165B021078AF000ADCC9D /* DetailedReflectionViewController.swift */,
+				428165B221078B0100ADCC9D /* EditReflectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4281659A210670D800ADCC9D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4281659B2106713400ADCC9D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				428165862106564F00ADCC9D /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4281659C2106714000ADCC9D /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +232,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				428165852106564F00ADCC9D /* ViewController.swift in Sources */,
+				428165A72106834300ADCC9D /* CoreDataHelper.swift in Sources */,
+				428165B321078B0100ADCC9D /* EditReflectionViewController.swift in Sources */,
+				428165AB21078A8A00ADCC9D /* NewTimerViewController.swift in Sources */,
+				428165B121078AF000ADCC9D /* DetailedReflectionViewController.swift in Sources */,
+				4281659E2106754600ADCC9D /* GoalTableViewController.swift in Sources */,
+				428165AD21078AB100ADCC9D /* CountdownViewController.swift in Sources */,
+				428165A52106813100ADCC9D /* KnowY.xcdatamodeld in Sources */,
+				428165A02106759300ADCC9D /* GoalTableViewCell.swift in Sources */,
+				428165A22106793C00ADCC9D /* DetailedGoalViewController.swift in Sources */,
+				428165A921078A2100ADCC9D /* EditGoalViewController.swift in Sources */,
+				428165AF21078AC700ADCC9D /* ReflectionTableViewController.swift in Sources */,
+				428165B521078B2400ADCC9D /* ReflectionTableViewCell.swift in Sources */,
 				428165832106564F00ADCC9D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +442,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		428165A32106813100ADCC9D /* KnowY.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				428165A42106813100ADCC9D /* KnowY.xcdatamodel */,
+			);
+			currentVersion = 428165A42106813100ADCC9D /* KnowY.xcdatamodel */;
+			path = KnowY.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 428165772106564E00ADCC9D /* Project object */;
 }
