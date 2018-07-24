@@ -10,8 +10,11 @@ import UIKit
 
 class NewTimerViewController: UIViewController {
 
+    @IBOutlet weak var durationDatePicker: UIDatePicker!
+    @IBOutlet weak var startButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        durationDatePicker.countDownDuration = 60.0
 
         // Do any additional setup after loading the view.
     }
@@ -22,14 +25,19 @@ class NewTimerViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        guard let identifier = segue.identifier else {return}
+        
+        switch identifier {
+        case "startCountdown":
+            let destination = segue.destination as! CountdownViewController
+            destination.duration = durationDatePicker.countDownDuration
+        default:
+            print("unexpected segue in NewTimerViewController")
+        }
     }
-    */
 
 }

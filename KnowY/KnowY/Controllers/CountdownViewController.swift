@@ -10,8 +10,20 @@ import UIKit
 
 class CountdownViewController: UIViewController {
 
+    @IBOutlet weak var timeLeftLabel: UILabel!
+    var duration: TimeInterval!
+    
+    func timeString(time: TimeInterval) -> String {
+        let hours = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(duration)
+        timeLeftLabel.text = timeString(time: duration)
 
         // Do any additional setup after loading the view.
     }

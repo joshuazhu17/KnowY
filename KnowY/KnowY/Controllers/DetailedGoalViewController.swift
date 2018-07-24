@@ -14,6 +14,7 @@ class DetailedGoalViewController: UIViewController {
     @IBOutlet weak var goalDescriptionLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var whyDescription: UILabel!
+    @IBOutlet weak var beginButton: UIButton!
     var goal = Goal()
 
     override func viewDidLoad() {
