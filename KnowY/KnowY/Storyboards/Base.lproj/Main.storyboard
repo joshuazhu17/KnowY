@@ -62,6 +62,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="goalNameLabel" destination="lga-WK-o4q" id="rUk-FN-Nqa"/>
+                                    <outlet property="timeLabel" destination="jix-di-6Ug" id="amw-7g-NID"/>
                                     <segue destination="rED-iP-nwy" kind="show" identifier="showDetailedGoal" id="EdT-PI-2Hm"/>
                                 </connections>
                             </tableViewCell>
@@ -83,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="1436" y="147.97601199400302"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirmation View Controller-->
         <scene sceneID="LTG-vy-pQy">
             <objects>
-                <viewController id="aZs-ap-Zur" sceneMemberID="viewController">
+                <viewController id="aZs-ap-Zur" customClass="ConfirmationViewController" customModule="KnowY" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xsB-pO-itn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +110,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="uLS-Pu-IF4" kind="unwind" identifier="confirmationCancel" unwindAction="unwindWithSegue:" id="OLb-cg-6j0"/>
+                                            <segue destination="uLS-Pu-IF4" kind="unwind" unwindAction="unwindWithSegueToGoalTableViewController:" id="nD1-MO-I7d"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsF-Ve-Qcg">
@@ -140,26 +142,95 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pZO-di-dCR"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qFs-cN-xzL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGu-0M-eqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uLS-Pu-IF4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2306.4000000000001" y="-100.29985007496252"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="QZr-aj-WnM">
             <objects>
-                <viewController id="Had-W2-lzb" sceneMemberID="viewController">
+                <viewController id="Had-W2-lzb" customClass="EditGoalViewController" customModule="KnowY" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yvi-Th-lol">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Goal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4nf-4r-01B">
+                                <rect key="frame" x="56" y="95" width="262" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fDC-1O-DJ1">
+                                <rect key="frame" x="16" y="150" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Yk-sj-4Pt">
+                                <rect key="frame" x="152" y="286" width="207" height="115"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="554143348.53202498">
+                                    <!--2018-07-24 16:42:28 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time to remind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WO7-kd-reH">
+                                <rect key="frame" x="16" y="333" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Write &quot;why&quot; here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b9E-Xe-zpl">
+                                <rect key="frame" x="16" y="494" width="302" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Why" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eur-7M-PDO">
+                                <rect key="frame" x="146" y="432" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eA-Qe-sio">
+                                <rect key="frame" x="26" y="617" width="324" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <segue destination="3De-4h-bhg" kind="unwind" identifier="done" unwindAction="unwindWithSegueToGoalTableViewController:" id="Z3e-SJ-tOF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mmX-UU-T3K"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="3qN-zk-2n4">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bQD-nn-j4r">
+                            <connections>
+                                <segue destination="3De-4h-bhg" kind="unwind" identifier="cancelToConfirmation" unwindAction="unwindWIthSegueToConfirmationViewController:" id="nef-fS-W2c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="6eA-Qe-sio" id="JG1-2H-eXI"/>
+                        <outlet property="goalDescriptionTextView" destination="fDC-1O-DJ1" id="HI8-Ue-uu6"/>
+                        <outlet property="goalNameTextField" destination="4nf-4r-01B" id="TsS-11-58e"/>
+                        <outlet property="reminderDatePicker" destination="2Yk-sj-4Pt" id="Bzf-sS-h7D"/>
+                        <outlet property="whyDescriptionTextView" destination="b9E-Xe-zpl" id="YSt-Id-OwR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFh-8U-2t1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3De-4h-bhg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3023" y="-100"/>
+            <point key="canvasLocation" x="3021.5999999999999" y="-100.29985007496252"/>
         </scene>
         <!--Title-->
         <scene sceneID="v9r-gK-2RB">
@@ -168,16 +239,76 @@
                     <view key="view" contentMode="scaleToFill" id="2h2-nd-SeP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giB-Ox-Mbo">
+                                <rect key="frame" x="96" y="88" width="183" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7Y-cD-2Uz">
+                                <rect key="frame" x="53" y="184" width="274" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time to remind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzq-QY-DME">
+                                <rect key="frame" x="16" y="323" width="115" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNI-ze-bT0">
+                                <rect key="frame" x="254" y="338" width="73" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Why" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ad-Il-Hfb">
+                                <rect key="frame" x="166" y="431" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Why description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEw-cl-CfD">
+                                <rect key="frame" x="53" y="514" width="226" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="FtN-eN-YP7"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="zda-Qt-Oxg">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="2xb-KA-Wg6"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="2xb-KA-Wg6">
+                            <connections>
+                                <segue destination="1oZ-8U-Itw" kind="unwind" identifier="backFromDetailToTableGoal" unwindAction="unwindWithSegueToGoalTableViewController:" id="S0S-zA-brV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Kmc-ph-bab">
+                            <connections>
+                                <segue destination="Had-W2-lzb" kind="show" identifier="editGoal" id="CWL-do-6CQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="goalDescriptionLabel" destination="P7Y-cD-2Uz" id="hOb-oO-O7j"/>
+                        <outlet property="goalNameLabel" destination="giB-Ox-Mbo" id="8hm-mv-CWr"/>
+                        <outlet property="timeLabel" destination="DNI-ze-bT0" id="Srq-GZ-dUs"/>
+                        <outlet property="whyDescription" destination="tEw-cl-CfD" id="JSq-91-8jJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnW-t4-FTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1oZ-8U-Itw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2308" y="676"/>
+            <point key="canvasLocation" x="2308" y="675.11244377811101"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uwy-a4-HBM">
@@ -198,4 +329,7 @@
             <point key="canvasLocation" x="496.80000000000001" y="147.97601199400302"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CWL-do-6CQ"/>
+    </inferredMetricsTieBreakers>
 </document>

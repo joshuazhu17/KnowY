@@ -41,7 +41,15 @@ struct CoreDataHelper {
         CoreDataHelper.saveGoal()
     }
     
-    static func retrieveGoals() {
+    static func retrieveGoals() -> [Goal] {
+        let fetchRequest = NSFetchRequest<Goal>(entityName: "Goal")
         
+        do {
+            let results = try context.fetch(fetchRequest)
+            return results
+        } catch let error {
+            print("Could not fetch: \(error.localizedDescription)")
+            return [Goal]()
+        }
     }
 }

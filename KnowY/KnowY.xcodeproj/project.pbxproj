@@ -23,6 +23,7 @@
 		428165B121078AF000ADCC9D /* DetailedReflectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165B021078AF000ADCC9D /* DetailedReflectionViewController.swift */; };
 		428165B321078B0100ADCC9D /* EditReflectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165B221078B0100ADCC9D /* EditReflectionViewController.swift */; };
 		428165B521078B2400ADCC9D /* ReflectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165B421078B2400ADCC9D /* ReflectionTableViewCell.swift */; };
+		428165B921078CF700ADCC9D /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165B821078CF700ADCC9D /* ConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		428165B021078AF000ADCC9D /* DetailedReflectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedReflectionViewController.swift; sourceTree = "<group>"; };
 		428165B221078B0100ADCC9D /* EditReflectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReflectionViewController.swift; sourceTree = "<group>"; };
 		428165B421078B2400ADCC9D /* ReflectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionTableViewCell.swift; sourceTree = "<group>"; };
+		428165B821078CF700ADCC9D /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				428165AE21078AC700ADCC9D /* ReflectionTableViewController.swift */,
 				428165B021078AF000ADCC9D /* DetailedReflectionViewController.swift */,
 				428165B221078B0100ADCC9D /* EditReflectionViewController.swift */,
+				428165B821078CF700ADCC9D /* ConfirmationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428165B921078CF700ADCC9D /* ConfirmationViewController.swift in Sources */,
 				428165A72106834300ADCC9D /* CoreDataHelper.swift in Sources */,
 				428165B321078B0100ADCC9D /* EditReflectionViewController.swift in Sources */,
 				428165AB21078A8A00ADCC9D /* NewTimerViewController.swift in Sources */,
