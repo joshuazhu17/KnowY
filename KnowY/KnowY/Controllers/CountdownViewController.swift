@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import UserNotifications
 
 class CountdownViewController: UIViewController {
 
     @IBOutlet weak var timeLeftLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
     var duration: TimeInterval!
+    var timer = Timer()
+    var isRunning = false
+    var seconds: TimeInterval!
     
     func timeString(time: TimeInterval) -> String {
         let hours = Int(time) / 3600
@@ -20,9 +25,48 @@ class CountdownViewController: UIViewController {
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
     
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(CountdownViewController.updateLabel)), userInfo: nil, repeats: true)
+    }
+    
+    @IBAction func startButtonTapped(_ sender: UIButton) {
+        if isRunning {
+            isRunning = false
+            startButton.setTitle("Resume", for: .normal)
+            timer.invalidate()
+        }
+        else {
+            isRunning = true
+            startButton.setTitle("Pause", for: .normal)
+            runTimer()
+        }
+        
+    }
+    
+    @objc func updateLabel() {
+        if seconds <= 0 {
+            let content = UNMutableNotificationContent()
+            content.title = "Timer done!"
+            content.body = "Check on the app!"
+            content.sound = UNNotificationSound.default()
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+            
+            let request = UNNotificationRequest(identifier: "testIdentifier", content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+            self.timer.invalidate()
+            self.startButton.isUserInteractionEnabled = false
+        }
+        else {
+            seconds! -= 1.0
+            timeLeftLabel.text = timeString(time: seconds)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(duration)
+        seconds = duration
         timeLeftLabel.text = timeString(time: duration)
 
         // Do any additional setup after loading the view.
