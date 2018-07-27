@@ -34,6 +34,14 @@ class EditGoalViewController: UIViewController {
             whyDescriptionTextView.text = ""
             reminderDatePicker.date = Date()
         }
+        
+        goalDescriptionTextView.delegate = self
+        goalDescriptionTextView.text = "Describe your goal (optional)"
+        goalDescriptionTextView.textColor = UIColor.lightGray
+        
+        whyDescriptionTextView.delegate = self
+        whyDescriptionTextView.text = "Write why you're doing this here"
+        whyDescriptionTextView.textColor = UIColor.lightGray
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,6 +90,27 @@ class EditGoalViewController: UIViewController {
         }
         
     }
-    
+}
 
+extension EditGoalViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+
+        if textView.text.isEmpty {
+            if textView == goalDescriptionTextView {
+                textView.text = "Describe your goal (optional)"
+            }
+            else {
+                textView.text = "Write why you're doing this here"
+            }
+            textView.textColor = UIColor.lightGray
+        }
+        
+    }
 }
