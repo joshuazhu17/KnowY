@@ -27,6 +27,7 @@ class EditGoalViewController: UIViewController {
             goalDescriptionTextView.text = goal.goalDescription
             whyDescriptionTextView.text = goal.why
             reminderDatePicker.date = goal.reminderTime ?? Date()
+            navigationController?.isNavigationBarHidden = true
         }
         else {
             goalNameTextField.text = ""
@@ -44,8 +45,14 @@ class EditGoalViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else {return}
         
+        navigationController?.isNavigationBarHidden = false
+        
+        if (identifier != "done") {
+            return
+        }
+        
         let content = UNMutableNotificationContent()
-        content.title = goal?.goalName ?? "Your goal"
+        content.title = goalNameTextField.text ?? "Your goal"
         content.body = "Check KnowY"
         
         var dateComponents = DateComponents()
@@ -69,6 +76,26 @@ class EditGoalViewController: UIViewController {
         let request = UNNotificationRequest(identifier: uuid, content: content, trigger: trigger)
         
         let notificationCenter = UNUserNotificationCenter.current()
+        
+        if goal != nil {
+            
+            notificationCenter.removePendingNotificationRequests(withIdentifiers: [goal!.uuid!])
+            
+            // This is just for debugging, print out the existing notifications
+            /*
+            notificationCenter.getPendingNotificationRequests { (notifications: [UNNotificationRequest]) in
+                for n in notifications {
+                    //print(n.content)
+                    print(n.debugDescription)
+                    print("====================================")
+                    print("====================================")
+                }
+                print(notifications.count)
+            }
+            */
+        }
+        
+        
         notificationCenter.add(request) {(error) in
             if let error = error {
                 fatalError("Fatal error: \(error.localizedDescription)")
