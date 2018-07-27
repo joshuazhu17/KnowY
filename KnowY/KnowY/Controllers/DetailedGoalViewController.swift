@@ -16,6 +16,9 @@ class DetailedGoalViewController: UIViewController {
     @IBOutlet weak var whyDescription: UILabel!
     @IBOutlet weak var beginButton: UIButton!
     var goal = Goal()
+    
+    @IBAction func unwindWithSegueToDetailedGoalViewController(_ segue: UIStoryboardSegue) {
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

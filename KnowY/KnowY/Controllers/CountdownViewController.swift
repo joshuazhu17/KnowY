@@ -50,13 +50,13 @@ class CountdownViewController: UIViewController {
             content.body = "Check on the app!"
             content.sound = UNNotificationSound.default()
             
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.001, repeats: false)
             
             let request = UNNotificationRequest(identifier: "testIdentifier", content: content, trigger: trigger)
             
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
             self.timer.invalidate()
-            self.startButton.isUserInteractionEnabled = false
+            performSegue(withIdentifier: "cancelTimer", sender: nil)
         }
         else {
             seconds! -= 1.0
