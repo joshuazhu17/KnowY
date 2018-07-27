@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UserNotifications
 
 class GoalTableViewController: UITableViewController {
     
@@ -71,7 +70,7 @@ class GoalTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             let goal = goals[indexPath.row]
-            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [goal.uuid!])
+            NotificationsHelper.deleteGoal(goal: goal)
             CoreDataHelper.delete(goal: goal)
             goals = CoreDataHelper.retrieveGoals()
             

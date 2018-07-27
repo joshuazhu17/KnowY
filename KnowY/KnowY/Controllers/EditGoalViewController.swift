@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UserNotifications
 
 class EditGoalViewController: UIViewController {
     
@@ -47,63 +46,12 @@ class EditGoalViewController: UIViewController {
         
         navigationController?.isNavigationBarHidden = false
         
-        if (identifier != "done") {
-            return
-        }
-        
-        let content = UNMutableNotificationContent()
-        content.title = goalNameTextField.text ?? "Your goal"
-        content.body = "Check KnowY"
-        
-        var dateComponents = DateComponents()
-        dateComponents.calendar = Calendar.current
-        
-        let date = reminderDatePicker.date
-        
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.dateFormat = "H m"
-        
-        let timeString = formatter.string(from: date)
-        let hourandminute = timeString.split(separator: " ")
-        
-        dateComponents.hour = Int(hourandminute[0])
-        dateComponents.minute = Int(hourandminute[1])
-        
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-        
-        let uuid = UUID().uuidString
-        let request = UNNotificationRequest(identifier: uuid, content: content, trigger: trigger)
-        
-        let notificationCenter = UNUserNotificationCenter.current()
-        
-        if goal != nil {
-            
-            notificationCenter.removePendingNotificationRequests(withIdentifiers: [goal!.uuid!])
-            
-            // This is just for debugging, print out the existing notifications
-            /*
-            notificationCenter.getPendingNotificationRequests { (notifications: [UNNotificationRequest]) in
-                for n in notifications {
-                    //print(n.content)
-                    print(n.debugDescription)
-                    print("====================================")
-                    print("====================================")
-                }
-                print(notifications.count)
-            }
-            */
-        }
-        
-        
-        notificationCenter.add(request) {(error) in
-            if let error = error {
-                fatalError("Fatal error: \(error.localizedDescription)")
-            }
-        }
-        
         switch identifier {
         case "done" where goal == nil:
+            let uuid = UUID().uuidString
+            
+            NotificationsHelper.createGoalReminder(name: goalNameTextField.text ?? "", date: reminderDatePicker.date, goal: goal, uuid: uuid)
+            
             let newGoal = CoreDataHelper.newGoal()
             newGoal.goalName = goalNameTextField.text ?? ""
             newGoal.goalDescription = goalDescriptionTextView.text ?? ""
@@ -114,7 +62,9 @@ class EditGoalViewController: UIViewController {
             CoreDataHelper.saveGoal()
             
         case "done" where goal != nil:
-            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [(goal?.uuid)!])
+            let uuid = UUID().uuidString
+            
+            NotificationsHelper.createGoalReminder(name: goalNameTextField.text ?? "", date: reminderDatePicker.date, goal: goal, uuid: uuid)
             
             goal?.goalName = goalNameTextField.text ?? ""
             goal?.goalDescription = goalDescriptionTextView.text ?? ""
