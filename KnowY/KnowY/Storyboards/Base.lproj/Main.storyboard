@@ -149,7 +149,7 @@
             </objects>
             <point key="canvasLocation" x="2306.4000000000001" y="-100.29985007496252"/>
         </scene>
-        <!--Title-->
+        <!--New Goal-->
         <scene sceneID="QZr-aj-WnM">
             <objects>
                 <viewController id="Had-W2-lzb" customClass="EditGoalViewController" customModule="KnowY" customModuleProvider="target" sceneMemberID="viewController">
@@ -161,7 +161,7 @@
                                 <rect key="frame" x="0.0" y="79" width="375" height="588"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uqw-2r-Ka5">
-                                        <rect key="frame" x="30" y="0.0" width="315" height="518"/>
+                                        <rect key="frame" x="30" y="0.0" width="315" height="498"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Goal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4nf-4r-01B">
                                                 <rect key="frame" x="30" y="0.0" width="255" height="40"/>
@@ -182,16 +182,16 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="eeO-G1-UUc">
-                                                <rect key="frame" x="8.5" y="200" width="298" height="134.5"/>
+                                                <rect key="frame" x="8.5" y="200" width="298" height="120"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WO7-kd-reH">
-                                                        <rect key="frame" x="0.0" y="58.5" width="98" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="51.5" width="98" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Yk-sj-4Pt">
-                                                        <rect key="frame" x="123" y="7.5" width="175" height="120"/>
+                                                        <rect key="frame" x="123" y="0.0" width="175" height="120"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="175" id="UeZ-qo-grG"/>
                                                             <constraint firstAttribute="height" constant="120" id="ilI-gM-ejV"/>
@@ -203,13 +203,13 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eur-7M-PDO">
-                                                <rect key="frame" x="137.5" y="364.5" width="40" height="23.5"/>
+                                                <rect key="frame" x="137.5" y="350" width="40" height="18"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write &quot;why&quot; here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b9E-Xe-zpl">
-                                                <rect key="frame" x="0.0" y="418" width="315" height="100"/>
+                                                <rect key="frame" x="0.0" y="398" width="315" height="100"/>
                                                 <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="KfH-Xj-HRB"/>
@@ -228,10 +228,10 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eA-Qe-sio">
-                                        <rect key="frame" x="0.0" y="548" width="375" height="40"/>
+                                        <rect key="frame" x="0.0" y="528" width="375" height="60"/>
                                         <color key="backgroundColor" red="0.070588235294117646" green="0.41568627450980394" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="bqb-Gt-tRI"/>
+                                            <constraint firstAttribute="height" constant="60" id="bqb-Gt-tRI"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="Done">
@@ -262,7 +262,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mmX-UU-T3K"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="3qN-zk-2n4">
+                    <navigationItem key="navigationItem" title="New Goal" id="3qN-zk-2n4">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bQD-nn-j4r">
                             <connections>
                                 <segue destination="3De-4h-bhg" kind="unwind" identifier="cancelToConfirmation" unwindAction="unwindWIthSegueToConfirmationViewController:" id="nef-fS-W2c"/>
@@ -282,7 +282,7 @@
             </objects>
             <point key="canvasLocation" x="3021.5999999999999" y="-100.29985007496252"/>
         </scene>
-        <!--Title-->
+        <!--Detailed Goal View Controller-->
         <scene sceneID="v9r-gK-2RB">
             <objects>
                 <viewController storyboardIdentifier="DetailedGoalViewController" id="rED-iP-nwy" customClass="DetailedGoalViewController" customModule="KnowY" customModuleProvider="target" sceneMemberID="viewController">
@@ -291,7 +291,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bAh-gy-SEZ">
-                                <rect key="frame" x="30" y="64" width="315" height="533"/>
+                                <rect key="frame" x="30" y="64" width="315" height="513"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giB-Ox-Mbo">
                                         <rect key="frame" x="30" y="0.0" width="255" height="40"/>
@@ -333,13 +333,13 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ad-Il-Hfb">
-                                        <rect key="frame" x="137.5" y="350" width="40" height="53"/>
+                                        <rect key="frame" x="137.5" y="350" width="40" height="33"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEw-cl-CfD">
-                                        <rect key="frame" x="0.0" y="433" width="315" height="100"/>
+                                        <rect key="frame" x="0.0" y="413" width="315" height="100"/>
                                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="HrR-wT-OsG"/>
@@ -359,13 +359,13 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Das-vJ-AuY">
-                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.41568627450000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="4a5-pW-RK8"/>
+                                    <constraint firstAttribute="height" constant="60" id="4a5-pW-RK8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Begin">
+                                <state key="normal" title="Start a session">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -385,7 +385,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FtN-eN-YP7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="zda-Qt-Oxg">
+                    <navigationItem key="navigationItem" id="zda-Qt-Oxg">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="2xb-KA-Wg6">
                             <connections>
                                 <segue destination="1oZ-8U-Itw" kind="unwind" identifier="backFromDetailToTableGoal" unwindAction="unwindWithSegueToGoalTableViewController:" id="S0S-zA-brV"/>

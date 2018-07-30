@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		425AC3A8210B99A400740348 /* NotificationsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425AC3A7210B99A400740348 /* NotificationsHelper.swift */; };
+		425AC3AA210BB84A00740348 /* Reflections.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425AC3A9210BB84A00740348 /* Reflections.storyboard */; };
 		428165832106564F00ADCC9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428165822106564F00ADCC9D /* AppDelegate.swift */; };
 		428165882106564F00ADCC9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428165862106564F00ADCC9D /* Main.storyboard */; };
 		4281658A2106565D00ADCC9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428165892106565D00ADCC9D /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		425AC3A7210B99A400740348 /* NotificationsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsHelper.swift; sourceTree = "<group>"; };
+		425AC3A9210BB84A00740348 /* Reflections.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reflections.storyboard; sourceTree = "<group>"; };
 		4281657F2106564F00ADCC9D /* KnowY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnowY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428165822106564F00ADCC9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		428165872106564F00ADCC9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				428165862106564F00ADCC9D /* Main.storyboard */,
 				428165BA2107CA3B00ADCC9D /* Timer.storyboard */,
+				425AC3A9210BB84A00740348 /* Reflections.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				4281658D2106565D00ADCC9D /* LaunchScreen.storyboard in Resources */,
 				4281658A2106565D00ADCC9D /* Assets.xcassets in Resources */,
 				428165882106564F00ADCC9D /* Main.storyboard in Resources */,
+				425AC3AA210BB84A00740348 /* Reflections.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

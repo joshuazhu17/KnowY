@@ -21,27 +21,42 @@ class EditGoalViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        goalDescriptionTextView.delegate = self
+        whyDescriptionTextView.delegate = self
+        
         if let goal = goal {
             goalNameTextField.text = goal.goalName
             goalDescriptionTextView.text = goal.goalDescription
+            if goal.goalDescription!.isEmpty {
+                goalDescriptionTextView.text = "Describe your goal (optional)"
+                goalDescriptionTextView.textColor = UIColor.lightGray
+            }
             whyDescriptionTextView.text = goal.why
+            if goal.why!.isEmpty {
+                whyDescriptionTextView.text = "Write why you're doing this here"
+                whyDescriptionTextView.textColor = UIColor.lightGray
+            }
             reminderDatePicker.date = goal.reminderTime ?? Date()
             navigationController?.isNavigationBarHidden = true
         }
         else {
             goalNameTextField.text = ""
-            goalDescriptionTextView.text = ""
-            whyDescriptionTextView.text = ""
             reminderDatePicker.date = Date()
+            
+            goalDescriptionTextView.text = "Describe your goal (optional)"
+            goalDescriptionTextView.textColor = UIColor.lightGray
+            whyDescriptionTextView.text = "Write why you're doing this here"
+            whyDescriptionTextView.textColor = UIColor.lightGray
         }
         
-        goalDescriptionTextView.delegate = self
-        goalDescriptionTextView.text = "Describe your goal (optional)"
-        goalDescriptionTextView.textColor = UIColor.lightGray
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(EditGoalViewController.dismissKeyboard))
         
-        whyDescriptionTextView.delegate = self
-        whyDescriptionTextView.text = "Write why you're doing this here"
-        whyDescriptionTextView.textColor = UIColor.lightGray
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +68,13 @@ class EditGoalViewController: UIViewController {
         guard let identifier = segue.identifier else {return}
         
         navigationController?.isNavigationBarHidden = false
+        
+        if goalDescriptionTextView.textColor == UIColor.lightGray {
+            goalDescriptionTextView.text = ""
+        }
+        if whyDescriptionTextView.textColor == UIColor.lightGray {
+            whyDescriptionTextView.text = ""
+        }
         
         switch identifier {
         case "done" where goal == nil:

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Set timer-->
         <scene sceneID="tyH-pg-ugr">
             <objects>
                 <viewController id="LY2-nY-qu5" customClass="NewTimerViewController" customModule="KnowY" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OlH-dY-Mg1"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="UhX-pr-82H">
+                    <navigationItem key="navigationItem" title="Set timer" id="UhX-pr-82H">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="keK-Z9-nEk">
                             <connections>
                                 <segue destination="hP4-wM-hq1" kind="unwind" unwindAction="unwindWithSegueToDetailedGoalViewController:" id="Gzm-he-FN9"/>
@@ -82,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="1036" y="150.67466266866569"/>
         </scene>
-        <!--Title-->
+        <!--Timer-->
         <scene sceneID="SKa-WE-WH6">
             <objects>
                 <viewController id="4FD-33-VNE" customClass="CountdownViewController" customModule="KnowY" customModuleProvider="target" sceneMemberID="viewController">
@@ -137,7 +137,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gj4-7P-BvP"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="d0K-jg-NUd">
+                    <navigationItem key="navigationItem" title="Timer" id="d0K-jg-NUd">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="a82-HJ-Rh4">
                             <connections>
                                 <segue destination="AHR-6s-zfd" kind="unwind" identifier="cancelTimer" unwindAction="unwindWithSegueToNewTimerViewController:" id="9WS-Jj-nJY"/>
