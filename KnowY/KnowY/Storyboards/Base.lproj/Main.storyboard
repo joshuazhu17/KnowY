@@ -157,75 +157,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< HEAD
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tm2-Ju-Tvu">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qx2-9Q-7SU">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="JFr-kf-56q">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uqw-2r-Ka5">
-                                                        <rect key="frame" x="30" y="0.0" width="315" height="557"/>
-                                                        <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Goal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4nf-4r-01B">
-                                                                <rect key="frame" x="30" y="0.0" width="255" height="40"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="Bd5-ha-5Im"/>
-                                                                </constraints>
-                                                                <nil key="textColor"/>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fDC-1O-DJ1">
-                                                                <rect key="frame" x="0.0" y="70" width="315" height="100"/>
-                                                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="100" id="eJo-Pn-tCA"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                            </textView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="eeO-G1-UUc">
-                                                                <rect key="frame" x="8.5" y="200" width="298" height="173.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WO7-kd-reH">
-                                                                        <rect key="frame" x="0.0" y="78" width="98" height="17.5"/>
-                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Yk-sj-4Pt">
-                                                                        <rect key="frame" x="123" y="27" width="175" height="120"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="175" id="UeZ-qo-grG"/>
-                                                                            <constraint firstAttribute="height" constant="120" id="ilI-gM-ejV"/>
-                                                                        </constraints>
-                                                                        <date key="date" timeIntervalSinceReferenceDate="554143348.53202498">
-                                                                            <!--2018-07-24 16:42:28 +0000-->
-                                                                        </date>
-                                                                    </datePicker>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eur-7M-PDO">
-                                                                <rect key="frame" x="137.5" y="403.5" width="40" height="23.5"/>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write &quot;why&quot; here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b9E-Xe-zpl">
-                                                                <rect key="frame" x="0.0" y="457" width="315" height="100"/>
-                                                                <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="100" id="KfH-Xj-HRB"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                            </textView>
-                                                        </subviews>
-=======
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="JFr-kf-56q">
                                 <rect key="frame" x="0.0" y="79" width="375" height="588"/>
                                 <subviews>
@@ -261,33 +192,14 @@
                                                     </label>
                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Yk-sj-4Pt">
                                                         <rect key="frame" x="123" y="0.0" width="175" height="120"/>
->>>>>>> parent of c0e9512... Fixed the bug where the keyboard would hide the text view
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="175" id="UeZ-qo-grG"/>
                                                             <constraint firstAttribute="height" constant="120" id="ilI-gM-ejV"/>
                                                         </constraints>
-<<<<<<< HEAD
-                                                    </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eA-Qe-sio">
-                                                        <rect key="frame" x="0.0" y="587" width="375" height="60"/>
-                                                        <color key="backgroundColor" red="0.070588235294117646" green="0.41568627450980394" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="bqb-Gt-tRI"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                                        <state key="normal" title="Done">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <segue destination="3De-4h-bhg" kind="unwind" identifier="done" unwindAction="unwindWithSegueToGoalTableViewController:" id="Z3e-SJ-tOF"/>
-                                                        </connections>
-                                                    </button>
-=======
                                                         <date key="date" timeIntervalSinceReferenceDate="554143348.53202498">
                                                             <!--2018-07-24 16:42:28 +0000-->
                                                         </date>
                                                     </datePicker>
->>>>>>> parent of c0e9512... Fixed the bug where the keyboard would hide the text view
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eur-7M-PDO">
