@@ -56,6 +56,11 @@ class DetailedGoalViewController: UIViewController {
         case "editGoal":
             let destination = segue.destination as! EditGoalViewController
             destination.goal = goal
+        case "beginTimer":
+            print("Beginning timer")
+        case "showReflections":
+            let destination = segue.destination as! ReflectionTableViewController
+            destination.goal = goal
         default:
             print("unexpected segue in DetailedGoalViewController")
         }

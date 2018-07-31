@@ -27,6 +27,12 @@ struct CoreDataHelper {
         return goal
     }
     
+    static func newReflection() -> Reflection {
+        let reflection = NSEntityDescription.insertNewObject(forEntityName: "Reflection", into: context) as! Reflection
+        
+        return reflection
+    }
+    
     static func saveGoal() {
         do {
             try context.save()
@@ -41,6 +47,11 @@ struct CoreDataHelper {
         CoreDataHelper.saveGoal()
     }
     
+    static func delete(reflection: Reflection) {
+        context.delete(reflection)
+        CoreDataHelper.saveGoal()
+    }
+    
     static func retrieveGoals() -> [Goal] {
         let fetchRequest = NSFetchRequest<Goal>(entityName: "Goal")
         
@@ -50,6 +61,19 @@ struct CoreDataHelper {
         } catch let error {
             print("Could not fetch: \(error.localizedDescription)")
             return [Goal]()
+        }
+    }
+    
+    static func retrieveReflections(uuid: String) -> [Reflection] {
+        let fetchRequest = NSFetchRequest<Reflection>(entityName: "Reflection")
+        do {
+            let results = try context.fetch(fetchRequest).filter({ (r: Reflection) -> Bool in
+                return r.goaluuid == uuid
+            })
+            return results
+        } catch let error {
+            print("Could not fetch reflections: \(error.localizedDescription)")
+            return [Reflection]()
         }
     }
 }

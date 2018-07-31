@@ -10,6 +10,8 @@ import UIKit
 
 class ReflectionTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var successLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

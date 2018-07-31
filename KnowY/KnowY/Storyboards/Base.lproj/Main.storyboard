@@ -384,29 +384,49 @@
                                     <constraint firstItem="tEw-cl-CfD" firstAttribute="leading" secondItem="bAh-gy-SEZ" secondAttribute="leading" id="x1e-hS-cbf"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Das-vJ-AuY">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Fg-jp-8Wr">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
-                                <color key="backgroundColor" red="0.070588235289999995" green="0.41568627450000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfR-8h-Dn1">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="History">
+                                            <color key="titleColor" red="0.070588235289999995" green="0.41568627450000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="AaC-XM-tOB" kind="show" identifier="showReflections" id="hU7-FJ-e3r"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Das-vJ-AuY">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
+                                        <color key="backgroundColor" red="0.070588235289999995" green="0.41568627450000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="4a5-pW-RK8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="Start a session">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="MuD-KI-RDO" kind="show" identifier="beginTimer" id="nET-29-yT8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="4a5-pW-RK8"/>
+                                    <constraint firstItem="Das-vJ-AuY" firstAttribute="width" secondItem="UfR-8h-Dn1" secondAttribute="width" id="7Dh-Rp-es6"/>
+                                    <constraint firstItem="Das-vJ-AuY" firstAttribute="height" secondItem="UfR-8h-Dn1" secondAttribute="height" id="hbA-db-an8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Start a session">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="MuD-KI-RDO" kind="show" identifier="beginTimer" id="nET-29-yT8"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Das-vJ-AuY" firstAttribute="leading" secondItem="FtN-eN-YP7" secondAttribute="leading" id="5Q1-Zc-muT"/>
-                            <constraint firstItem="FtN-eN-YP7" firstAttribute="trailing" secondItem="Das-vJ-AuY" secondAttribute="trailing" id="JHE-RF-bod"/>
-                            <constraint firstItem="Das-vJ-AuY" firstAttribute="top" secondItem="bAh-gy-SEZ" secondAttribute="bottom" constant="30" id="KuC-hT-rcj"/>
+                            <constraint firstItem="2Fg-jp-8Wr" firstAttribute="leading" secondItem="FtN-eN-YP7" secondAttribute="leading" id="36k-wC-LL8"/>
+                            <constraint firstItem="FtN-eN-YP7" firstAttribute="trailing" secondItem="2Fg-jp-8Wr" secondAttribute="trailing" id="EFR-Nk-lll"/>
                             <constraint firstItem="bAh-gy-SEZ" firstAttribute="top" secondItem="FtN-eN-YP7" secondAttribute="top" id="Q3D-qN-KfA"/>
                             <constraint firstItem="bAh-gy-SEZ" firstAttribute="leading" secondItem="FtN-eN-YP7" secondAttribute="leading" constant="30" id="bjL-Mv-DBW"/>
-                            <constraint firstItem="Das-vJ-AuY" firstAttribute="bottom" secondItem="FtN-eN-YP7" secondAttribute="bottom" id="lxg-Mx-7ra"/>
+                            <constraint firstItem="2Fg-jp-8Wr" firstAttribute="top" secondItem="bAh-gy-SEZ" secondAttribute="bottom" constant="30" id="dJg-As-1Q3"/>
+                            <constraint firstItem="2Fg-jp-8Wr" firstAttribute="bottom" secondItem="FtN-eN-YP7" secondAttribute="bottom" id="gpM-Kj-djq"/>
                             <constraint firstItem="FtN-eN-YP7" firstAttribute="trailing" secondItem="bAh-gy-SEZ" secondAttribute="trailing" constant="30" id="owW-Uz-4MD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FtN-eN-YP7"/>
@@ -435,6 +455,14 @@
                 <exit id="1oZ-8U-Itw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2308" y="675.11244377811101"/>
+        </scene>
+        <!--Reflections-->
+        <scene sceneID="qei-In-e1C">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Reflections" id="AaC-XM-tOB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F4c-Zx-4CQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2234" y="1104"/>
         </scene>
         <!--Timer-->
         <scene sceneID="Spy-Kz-32Z">
