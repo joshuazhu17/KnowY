@@ -19,7 +19,7 @@ class DetailedGoalViewController: UIViewController {
     
     @IBAction func unwindWithSegueToDetailedGoalViewController(_ segue: UIStoryboardSegue) {
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +40,10 @@ class DetailedGoalViewController: UIViewController {
         }
 
         // Do any additional setup after loading the view.
+        
+        let rightItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(DetailedGoalViewController.prepare))
+        
+        self.navigationItem.rightBarButtonItem = rightItem
     }
 
     override func didReceiveMemoryWarning() {

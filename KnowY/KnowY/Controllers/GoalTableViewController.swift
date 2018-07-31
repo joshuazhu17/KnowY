@@ -87,7 +87,7 @@ class GoalTableViewController: UITableViewController {
         switch identifier {
         case "showDetailedGoal":
             guard let indexPath = tableView.indexPathForSelectedRow else {return}
-            let destination = segue.destination as! DetailedGoalViewController
+            let destination = segue.destination as! GoalTabBarViewController
             destination.goal = CoreDataHelper.retrieveGoals()[indexPath.row]
         case "newGoal":
             print("new goal")
