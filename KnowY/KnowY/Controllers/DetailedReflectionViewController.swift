@@ -36,14 +36,23 @@ class DetailedReflectionViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        guard let identifier = segue.identifier else {return}
+        
+        switch identifier {
+        case "editReflection":
+            guard let destination = segue.destination as? EditReflectionViewController else {return}
+            destination.reflection = reflection
+        default:
+            print("unidentified segue in detailed reflection view controller")
+        }
     }
-    */
+    
 
 }
