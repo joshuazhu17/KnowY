@@ -10,18 +10,36 @@ import UIKit
 
 class ReflectionTableViewController: UITableViewController {
     
-    var goal: Goal!
+    var goal: Goal?
     
     var reflections = [Reflection]() {
         didSet {
             tableView.reloadData()
         }
     }
+    
+    @IBAction func unwindWithSegueToReflectionTableViewController(_ segue: UIStoryboardSegue) {
+        guard let goal = goal else {return}
+        if let uuid = goal.uuid {
+            reflections = CoreDataHelper.retrieveReflections(uuid: uuid)
+        }
+        else {
+            reflections = [Reflection]()
+        }
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        reflections = CoreDataHelper.retrieveReflections(uuid: goal.uuid!)
+        
+        guard let goal = goal else {return}
+        
+        if let uuid = goal.uuid {
+            reflections = CoreDataHelper.retrieveReflections(uuid: uuid)
+        }
+        else {
+            reflections = [Reflection]()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,59 +59,70 @@ class ReflectionTableViewController: UITableViewController {
         return reflections.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReflectionTableViewCell", for: indexPath) as? ReflectionTableViewCell else { return ReflectionTableViewCell() }
 
         // Configure the cell...
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "MM/dd/yy"
+        
+        let reflection = reflections[indexPath.row]
+        if let date = reflection.date {
+            cell.dateLabel.text = formatter.string(from: date)
+        }
+        else {
+            cell.dateLabel.text = "Unkown date"
+        }
+        if reflection.success {
+            cell.successLabel.text = "Success"
+        }
+        else {
+            cell.successLabel.text = "Failure"
+        }
 
         return cell
     }
-    */
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            guard let goal = goal else {return}
+            let reflection = reflections[indexPath.row]
+            CoreDataHelper.delete(reflection: reflection)
+            if let uuid = goal.uuid {
+                reflections = CoreDataHelper.retrieveReflections(uuid: uuid)
+            }
+            else {
+                fatalError("goal doesn't have a uuid")
+            }
+        }
     }
-    */
+    
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
 
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        guard let identifier = segue.identifier else {return}
+        
+        switch identifier {
+        case "newReflection":
+            print("new reflection")
+            guard let destination = segue.destination as? EditReflectionViewController else {return}
+            destination.goal = goal
+            
+        default:
+            print("unidentified segue in reflection table view controller")
+        }
     }
-    */
+    
 
 }
