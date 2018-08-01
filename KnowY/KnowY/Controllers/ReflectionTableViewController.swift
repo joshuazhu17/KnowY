@@ -118,6 +118,11 @@ class ReflectionTableViewController: UITableViewController {
             print("new reflection")
             guard let destination = segue.destination as? EditReflectionViewController else {return}
             destination.goal = goal
+        
+        case "showReflection":
+            guard let indexPath = tableView.indexPathForSelectedRow else {return}
+            guard let destination = segue.destination as? DetailedReflectionViewController else {return}
+            destination.reflection = reflections[indexPath.row]
             
         default:
             print("unidentified segue in reflection table view controller")

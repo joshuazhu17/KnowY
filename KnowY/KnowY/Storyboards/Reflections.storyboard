@@ -52,6 +52,7 @@
                                 <connections>
                                     <outlet property="dateLabel" destination="ORv-oL-BYx" id="v3p-g1-mGo"/>
                                     <outlet property="successLabel" destination="4jO-yg-U5F" id="txE-QP-g2C"/>
+                                    <segue destination="jVd-vU-Amv" kind="show" identifier="showReflection" id="cQp-7y-Uek"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -78,6 +79,43 @@
             </objects>
             <point key="canvasLocation" x="1040.8" y="41.829085457271368"/>
         </scene>
+        <!--Detailed Reflection View Controller-->
+        <scene sceneID="S3m-y0-2h7">
+            <objects>
+                <viewController id="jVd-vU-Amv" customClass="DetailedReflectionViewController" customModule="KnowY" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m0V-OZ-hIt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Details" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5r-Nm-Jux">
+                                <rect key="frame" x="53" y="381" width="268" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.29803921570000003" green="0.85098039219999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Success or failure" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xA-77-0cH">
+                                <rect key="frame" x="53" y="115" width="268" height="151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.1647058824" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="d3U-UX-p5K"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailsLabel" destination="j5r-Nm-Jux" id="puM-7P-ePr"/>
+                        <outlet property="successLabel" destination="6xA-77-0cH" id="KOI-D1-XVq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JKg-6M-aiq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="195.6521739130435"/>
+        </scene>
         <!--Edit Reflection View Controller-->
         <scene sceneID="Rcc-We-2PS">
             <objects>
@@ -98,7 +136,6 @@
                                 <rect key="frame" x="67" y="309" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">RYUJIN NO KEN NO KURAE RYUJIN NO KEN NO KURAE RYUJIN NO KEN NO KURAE RYUJIN NO KEN NO KURAE RYUJIN NO KEN NO KURAE RYUJIN NO KEN NO KURAE RYUJIN NO KEN NO KURAE RYUJIN NO KEN NO KURAE RYUJIN NO KEN NO KURAE</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

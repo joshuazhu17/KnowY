@@ -9,9 +9,23 @@
 import UIKit
 
 class DetailedReflectionViewController: UIViewController {
+    
+    var reflection: Reflection?
 
+    @IBOutlet weak var successLabel: UILabel!
+    @IBOutlet weak var detailsLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let reflection = reflection else {return}
+        
+        if reflection.success {
+            successLabel.text = "You succeeded! Keep it up!"
+        }
+        else {
+            successLabel.text = "Hm, not quite... Don't let this get you down though!"
+        }
+        detailsLabel.text = reflection.details ?? ""
 
         // Do any additional setup after loading the view.
     }
