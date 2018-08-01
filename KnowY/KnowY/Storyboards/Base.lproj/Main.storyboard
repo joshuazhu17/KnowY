@@ -449,6 +449,7 @@
                         <outlet property="goalNameLabel" destination="giB-Ox-Mbo" id="8hm-mv-CWr"/>
                         <outlet property="timeLabel" destination="DNI-ze-bT0" id="Srq-GZ-dUs"/>
                         <outlet property="whyDescription" destination="tEw-cl-CfD" id="JSq-91-8jJ"/>
+                        <segue destination="AaC-XM-tOB" kind="show" identifier="straightToNewReflection" id="iwf-kZ-ux3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnW-t4-FTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -492,6 +493,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="iwf-kZ-ux3"/>
         <segue reference="CWL-do-6CQ"/>
     </inferredMetricsTieBreakers>
 </document>

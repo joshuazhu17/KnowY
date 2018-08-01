@@ -56,7 +56,7 @@ class CountdownViewController: UIViewController {
             
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
             self.timer.invalidate()
-            performSegue(withIdentifier: "cancelTimer", sender: nil)
+            performSegue(withIdentifier: "timerDone", sender: self)
         }
         else {
             seconds! -= 1.0

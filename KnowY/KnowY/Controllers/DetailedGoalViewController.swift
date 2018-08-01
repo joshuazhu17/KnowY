@@ -18,6 +18,11 @@ class DetailedGoalViewController: UIViewController {
     var goal = Goal()
     
     @IBAction func unwindWithSegueToDetailedGoalViewController(_ segue: UIStoryboardSegue) {
+        if segue.source is CountdownViewController {
+            DispatchQueue.main.async() {
+                self.performSegue(withIdentifier: "straightToNewReflection", sender: self)
+            }
+        }
     }
 
     override func viewDidLoad() {
@@ -61,6 +66,10 @@ class DetailedGoalViewController: UIViewController {
         case "showReflections":
             let destination = segue.destination as! ReflectionTableViewController
             destination.goal = goal
+        case "straightToNewReflection":
+            guard let destination = segue.destination as? ReflectionTableViewController else {return}
+            destination.goal = goal
+            destination.fromTimer = true
         default:
             print("unexpected segue in DetailedGoalViewController")
         }

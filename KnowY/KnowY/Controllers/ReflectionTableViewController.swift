@@ -11,6 +11,7 @@ import UIKit
 class ReflectionTableViewController: UITableViewController {
     
     var goal: Goal?
+    var fromTimer: Bool?
     
     var reflections = [Reflection]() {
         didSet {
@@ -39,6 +40,14 @@ class ReflectionTableViewController: UITableViewController {
         }
         else {
             reflections = [Reflection]()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        guard let fromTimer = fromTimer else {return}
+        if fromTimer {
+            self.fromTimer = false
+            performSegue(withIdentifier: "newReflection", sender: nil)
         }
     }
 
@@ -115,10 +124,8 @@ class ReflectionTableViewController: UITableViewController {
         
         switch identifier {
         case "newReflection":
-            print("new reflection")
             guard let destination = segue.destination as? EditReflectionViewController else {return}
             destination.goal = goal
-        
         case "showReflection":
             guard let indexPath = tableView.indexPathForSelectedRow else {return}
             guard let destination = segue.destination as? DetailedReflectionViewController else {return}

@@ -140,13 +140,14 @@
                     <navigationItem key="navigationItem" title="Timer" id="d0K-jg-NUd">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="a82-HJ-Rh4">
                             <connections>
-                                <segue destination="AHR-6s-zfd" kind="unwind" identifier="cancelTimer" unwindAction="unwindWithSegueToNewTimerViewController:" id="9WS-Jj-nJY"/>
+                                <segue destination="AHR-6s-zfd" kind="unwind" identifier="cancelTimer" unwindAction="unwindWithSegueToNewTimerViewController:" id="Hlh-5K-ZW9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="startButton" destination="myp-6k-Ntr" id="mmu-TK-CxH"/>
                         <outlet property="timeLeftLabel" destination="lem-mN-PNT" id="B92-Kd-3VV"/>
+                        <segue destination="AHR-6s-zfd" kind="unwind" identifier="timerDone" unwindAction="unwindWithSegueToDetailedGoalViewController:" id="r60-SE-1u4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4k-Z1-QAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
