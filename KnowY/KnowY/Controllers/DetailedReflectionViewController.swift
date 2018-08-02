@@ -25,7 +25,7 @@ class DetailedReflectionViewController: UIViewController {
         }
         else {
             successLabel.text = "Hm, not quite... Don't let this get you down though!"
-            view.backgroundColor = UIColor(displayP3Red: 1.0, green: 59.0/255.0, blue: 48.0/255.0, alpha: 1)
+            view.backgroundColor = UIColor(displayP3Red: 80.0/255.0, green: 86.0/255.0, blue: 204.0/255.0, alpha: 1)
         }
         detailsLabel.text = reflection.details ?? ""
 

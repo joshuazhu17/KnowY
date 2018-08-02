@@ -66,12 +66,15 @@ class CountdownViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        seconds = duration
+        //seconds = duration
+        seconds = 5
         timeLeftLabel.text = timeString(time: duration)
         
         runTimer()
 
         // Do any additional setup after loading the view.
+        
+        startButton.layer.cornerRadius = 12
     }
 
     override func didReceiveMemoryWarning() {

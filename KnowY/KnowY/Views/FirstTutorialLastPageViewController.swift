@@ -1,32 +1,28 @@
 //
-//  ConfirmationViewController.swift
+//  FirstTutorialLastPageViewController.swift
 //  KnowY
 //
-//  Created by Joshua Zhu on 7/24/18.
+//  Created by Joshua Zhu on 8/2/18.
 //  Copyright © 2018 joshuazhu. All rights reserved.
 //
 
 import UIKit
 
-class ConfirmationViewController: UIViewController {
-    
-    @IBOutlet weak var noButton: UIButton!
-    @IBOutlet weak var yesButton: UIButton!
-    @IBAction func unwindWIthSegueToConfirmationViewController(_ segue: UIStoryboardSegue) {
-        
-    }
+class FirstTutorialLastPageViewController: UIViewController {
 
+    @IBOutlet weak var doneButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        noButton.layer.cornerRadius = 8
-        yesButton.layer.cornerRadius = 8
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func doneButtonTouched(_ sender: UIButton) {
+        UserDefaults.standard.set(true, forKey: Constants.UserDefaults.isNotNewUser)
     }
     
 

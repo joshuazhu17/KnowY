@@ -25,6 +25,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UNUserNotificationCenter.current().delegate = self
         
+        let defaults = UserDefaults.standard
+        let initialViewController: UIViewController
+        let storyboard: UIStoryboard
+        
+        if let isNotNewUser = defaults.bool(forKey: Constants.UserDefaults.isNotNewUser) as? Bool,
+            isNotNewUser {
+            storyboard = UIStoryboard(name: "Main", bundle: .main)
+            guard let VC = storyboard.instantiateInitialViewController() else {return false}
+            initialViewController = VC
+        } else {
+            storyboard = UIStoryboard(name: "FirstTutorial", bundle: .main)
+            guard let VC = storyboard.instantiateInitialViewController() else {return false}
+            initialViewController = VC
+        }
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+
+        
         return true
     }
 

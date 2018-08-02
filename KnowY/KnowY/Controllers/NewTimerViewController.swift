@@ -17,6 +17,7 @@ class NewTimerViewController: UIViewController {
         durationDatePicker.countDownDuration = 60.0
 
         // Do any additional setup after loading the view.
+        startButton.layer.cornerRadius = 12
     }
     
     @IBAction func unwindWithSegueToNewTimerViewController(_ segue: UIStoryboardSegue) {

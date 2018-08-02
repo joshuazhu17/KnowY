@@ -95,16 +95,16 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First, are you serious about this goal? Be honest with yourself." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRQ-Pi-rl3">
                                 <rect key="frame" x="16" y="94" width="343" height="125.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZO2-3z-tCy">
-                                <rect key="frame" x="30" y="519" width="315" height="48"/>
+                                <rect key="frame" x="30" y="419" width="315" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1f-AT-AhV">
                                         <rect key="frame" x="0.0" y="0.0" width="142.5" height="48"/>
-                                        <color key="backgroundColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.40392156862745099" green="0.40784313725490196" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="No">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,7 +115,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsF-Ve-Qcg">
                                         <rect key="frame" x="172.5" y="0.0" width="142.5" height="48"/>
-                                        <color key="backgroundColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.31372549019607843" green="0.62862317453022876" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Yes">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -131,18 +131,22 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.81176470588235294" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ZO2-3z-tCy" firstAttribute="leading" secondItem="pZO-di-dCR" secondAttribute="leading" constant="30" id="FdY-5k-uHp"/>
                             <constraint firstItem="pZO-di-dCR" firstAttribute="trailing" secondItem="dRQ-Pi-rl3" secondAttribute="trailing" constant="16" id="K5z-xC-3LB"/>
                             <constraint firstItem="dRQ-Pi-rl3" firstAttribute="top" secondItem="pZO-di-dCR" secondAttribute="top" constant="30" id="X4O-SQ-pDm"/>
                             <constraint firstItem="dRQ-Pi-rl3" firstAttribute="leading" secondItem="pZO-di-dCR" secondAttribute="leading" constant="16" id="b2T-6i-Knh"/>
-                            <constraint firstItem="pZO-di-dCR" firstAttribute="bottom" secondItem="ZO2-3z-tCy" secondAttribute="bottom" constant="100" id="kly-5w-0gV"/>
+                            <constraint firstItem="pZO-di-dCR" firstAttribute="bottom" secondItem="ZO2-3z-tCy" secondAttribute="bottom" constant="200" id="kly-5w-0gV"/>
                             <constraint firstItem="pZO-di-dCR" firstAttribute="trailing" secondItem="ZO2-3z-tCy" secondAttribute="trailing" constant="30" id="nmi-Dl-dES"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pZO-di-dCR"/>
                     </view>
                     <navigationItem key="navigationItem" id="qFs-cN-xzL"/>
+                    <connections>
+                        <outlet property="noButton" destination="I1f-AT-AhV" id="DG9-lO-3QJ"/>
+                        <outlet property="yesButton" destination="JsF-Ve-Qcg" id="MO0-Ne-OPx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGu-0M-eqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uLS-Pu-IF4" userLabel="Exit" sceneMemberID="exit"/>
@@ -494,6 +498,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="iwf-kZ-ux3"/>
-        <segue reference="CWL-do-6CQ"/>
+        <segue reference="1LG-Fa-EGa"/>
     </inferredMetricsTieBreakers>
 </document>
