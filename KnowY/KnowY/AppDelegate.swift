@@ -28,9 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let defaults = UserDefaults.standard
         let initialViewController: UIViewController
         let storyboard: UIStoryboard
-        
-        if let isNotNewUser = defaults.bool(forKey: Constants.UserDefaults.isNotNewUser) as? Bool,
-            isNotNewUser {
+        let isNotNewUser = defaults.bool(forKey: Constants.UserDefaults.isNotNewUser)
+        if isNotNewUser {
             storyboard = UIStoryboard(name: "Main", bundle: .main)
             guard let VC = storyboard.instantiateInitialViewController() else {return false}
             initialViewController = VC
@@ -41,7 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
-
         
         return true
     }
@@ -122,6 +120,10 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         //add code later
+        UserDefaults.standard.set(response.notification.request.identifier, forKey: Constants.UserDefaults.notificationuuid)
+        window?.rootViewController = UIStoryboard(name: "Main", bundle: .main).instantiateInitialViewController()
+        completionHandler()
+        
     }
     
 }

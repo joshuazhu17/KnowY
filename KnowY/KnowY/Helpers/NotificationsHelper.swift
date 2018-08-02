@@ -34,8 +34,8 @@ struct NotificationsHelper {
         
         let notificationCenter = UNUserNotificationCenter.current()
         
-        if goal != nil {
-            notificationCenter.removePendingNotificationRequests(withIdentifiers: [goal!.uuid!])
+        if let goal = goal {
+            self.deleteGoal(goal: goal)
         }
         
         notificationCenter.add(request) {(error) in
@@ -44,7 +44,7 @@ struct NotificationsHelper {
             }
         }
         // This is just for debugging, print out the existing notifications
-        
+        /*
         notificationCenter.getPendingNotificationRequests { (notifications: [UNNotificationRequest]) in
             for n in notifications {
                 //print(n.content)
@@ -54,6 +54,7 @@ struct NotificationsHelper {
             }
             print(notifications.count)
         }
+        */
     }
     
     static func deleteGoal(goal: Goal) {

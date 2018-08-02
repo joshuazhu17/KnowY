@@ -11,5 +11,6 @@ import Foundation
 struct Constants {
     struct UserDefaults {
         static let isNotNewUser = "isNotNewUser"
+        static let notificationuuid = "notificationuuid"
     }
 }

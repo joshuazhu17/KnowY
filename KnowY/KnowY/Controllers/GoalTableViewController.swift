@@ -16,6 +16,8 @@ class GoalTableViewController: UITableViewController {
         }
     }
     
+    var notificationGoal: Goal?
+    
     @IBAction func unwindWithSegueToGoalTableViewController(_ segue: UIStoryboardSegue) {
         goals = CoreDataHelper.retrieveGoals()
     }
@@ -25,7 +27,21 @@ class GoalTableViewController: UITableViewController {
         
         goals = CoreDataHelper.retrieveGoals()
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("HI")
+        if let uuid = UserDefaults.standard.string(forKey: Constants.UserDefaults.notificationuuid) {
+            for goal in goals {
+                if goal.uuid == uuid {
+                    notificationGoal = goal
+                }
+            }
+            self.performSegue(withIdentifier: "showGoalFromNotification", sender: self)
+            UserDefaults.standard.set(nil, forKey: Constants.UserDefaults.notificationuuid)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -91,6 +107,10 @@ class GoalTableViewController: UITableViewController {
             destination.goal = goals[indexPath.row]
         case "newGoal":
             print("new goal")
+        case "showGoalFromNotification":
+            let destination = segue.destination as! DetailedGoalViewController
+            guard let notificationGoal = notificationGoal else {return}
+            destination.goal = notificationGoal
         default:
             print("unexpected segue in GoalTableViewController")
         }

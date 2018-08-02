@@ -80,6 +80,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="rED-iP-nwy" kind="show" identifier="showGoalFromNotification" id="RZ6-se-vAe"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1E-Xg-hMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -498,6 +501,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="iwf-kZ-ux3"/>
+        <segue reference="RZ6-se-vAe"/>
         <segue reference="1LG-Fa-EGa"/>
     </inferredMetricsTieBreakers>
 </document>
