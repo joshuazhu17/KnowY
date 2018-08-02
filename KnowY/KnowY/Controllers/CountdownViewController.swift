@@ -15,7 +15,7 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     var duration: TimeInterval!
     var timer = Timer()
-    var isRunning = false
+    var isRunning = true
     var seconds: TimeInterval!
     
     func timeString(time: TimeInterval) -> String {
@@ -68,6 +68,8 @@ class CountdownViewController: UIViewController {
         super.viewDidLoad()
         seconds = duration
         timeLeftLabel.text = timeString(time: duration)
+        
+        runTimer()
 
         // Do any additional setup after loading the view.
     }

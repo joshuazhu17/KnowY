@@ -68,7 +68,12 @@ struct CoreDataHelper {
         let fetchRequest = NSFetchRequest<Reflection>(entityName: "Reflection")
         do {
             let results = try context.fetch(fetchRequest).filter({ (r: Reflection) -> Bool in
-                return r.goaluuid == uuid
+                let id = r.goaluuid ?? ""
+                return id == uuid
+            }).sorted(by: { (r1: Reflection, r2: Reflection) -> Bool in
+                guard let date1 = r1.date else { return false }
+                guard let date2 = r2.date else { return true }
+                return date1 > date2
             })
             return results
         } catch let error {

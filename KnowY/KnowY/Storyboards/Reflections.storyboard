@@ -27,26 +27,26 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORv-oL-BYx">
-                                            <rect key="frame" x="30" y="35" width="79" height="48"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORv-oL-BYx">
+                                            <rect key="frame" x="31" y="36" width="63" height="48"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jO-yg-U5F">
-                                            <rect key="frame" x="235" y="35" width="123" height="48"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jO-yg-U5F">
+                                            <rect key="frame" x="219.5" y="36" width="114.5" height="48"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ORv-oL-BYx" firstAttribute="leading" secondItem="xCT-74-cJc" secondAttribute="leadingMargin" constant="15" id="AJh-mz-3fg"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="ORv-oL-BYx" secondAttribute="bottom" constant="25" id="KSt-C1-cK7"/>
-                                        <constraint firstItem="4jO-yg-U5F" firstAttribute="trailing" secondItem="xCT-74-cJc" secondAttribute="trailingMargin" constant="25" id="Y6j-Wq-DgS"/>
-                                        <constraint firstItem="ORv-oL-BYx" firstAttribute="top" secondItem="xCT-74-cJc" secondAttribute="topMargin" constant="25" id="ayJ-Nj-3na"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="4jO-yg-U5F" secondAttribute="bottom" constant="25" id="pCI-gv-9ao"/>
-                                        <constraint firstItem="4jO-yg-U5F" firstAttribute="top" secondItem="xCT-74-cJc" secondAttribute="topMargin" constant="25" id="zhi-I6-zkl"/>
+                                        <constraint firstItem="ORv-oL-BYx" firstAttribute="leading" secondItem="xCT-74-cJc" secondAttribute="leadingMargin" constant="15" id="1V2-iZ-Ntd"/>
+                                        <constraint firstItem="ORv-oL-BYx" firstAttribute="top" secondItem="xCT-74-cJc" secondAttribute="topMargin" constant="25" id="Gm7-GU-uzF"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ORv-oL-BYx" secondAttribute="bottom" constant="25" id="SYV-hT-Fj8"/>
+                                        <constraint firstItem="4jO-yg-U5F" firstAttribute="top" secondItem="xCT-74-cJc" secondAttribute="topMargin" constant="25" id="fo2-Ir-kmF"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4jO-yg-U5F" secondAttribute="trailing" constant="25" id="jd4-UF-pKh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4jO-yg-U5F" secondAttribute="bottom" constant="25" id="vPH-ev-MiB"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -140,7 +140,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="04k-Vo-CFW">
-                                        <rect key="frame" x="121" y="53.5" width="73" height="52"/>
+                                        <rect key="frame" x="57.5" y="53.5" width="200" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="O2w-Uf-qjB"/>
+                                        </constraints>
                                         <segments>
                                             <segment title="Yes"/>
                                             <segment title="No"/>
