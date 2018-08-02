@@ -11,6 +11,11 @@ import UserNotifications
 
 struct NotificationsHelper {
     static func createGoalReminder(name: String?, date: Date, goal: Goal?, uuid: String) {
+        
+        if let goal = goal {
+            self.deleteGoal(goal: goal)
+        }
+        
         let content = UNMutableNotificationContent()
         content.title = name ?? "Your goal"
         content.body = "Check KnowY"
@@ -33,10 +38,6 @@ struct NotificationsHelper {
         let request = UNNotificationRequest(identifier: uuid, content: content, trigger: trigger)
         
         let notificationCenter = UNUserNotificationCenter.current()
-        
-        if let goal = goal {
-            self.deleteGoal(goal: goal)
-        }
         
         notificationCenter.add(request) {(error) in
             if let error = error {

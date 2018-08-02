@@ -43,6 +43,12 @@ struct CoreDataHelper {
     }
     
     static func delete(goal: Goal) {
+        let reflections = self.retrieveReflections(uuid: goal.uuid!)
+        for r in reflections {
+            if r.goaluuid! == goal.uuid! {
+                self.delete(reflection: r)
+            }
+        }
         context.delete(goal)
         CoreDataHelper.saveGoal()
     }

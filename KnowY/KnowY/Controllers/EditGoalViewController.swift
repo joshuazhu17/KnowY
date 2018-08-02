@@ -102,15 +102,12 @@ class EditGoalViewController: UIViewController {
             CoreDataHelper.saveGoal()
             
         case "done" where goal != nil:
-            let uuid = UUID().uuidString
-            
-            NotificationsHelper.createGoalReminder(name: goalNameTextField.text ?? "", date: reminderDatePicker.date, goal: goal, uuid: uuid)
+            NotificationsHelper.createGoalReminder(name: goalNameTextField.text ?? "", date: reminderDatePicker.date, goal: goal, uuid: goal!.uuid!)
             
             goal?.goalName = goalNameTextField.text ?? ""
             goal?.goalDescription = goalDescriptionTextView.text ?? ""
             goal?.why = whyDescriptionTextView.text ?? ""
             goal?.reminderTime = reminderDatePicker.date
-            goal?.uuid = uuid
             
             CoreDataHelper.saveGoal()
             
