@@ -14,6 +14,14 @@ class DetailedReflectionViewController: UIViewController {
 
     @IBOutlet weak var successLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
+    
+    @IBAction func unwindWithSegueToDetailedReflectionViewController(_ segue: UIStoryboardSegue) {
+        if segue.source is EditReflectionViewController {
+            guard let vc = segue.source as? EditReflectionViewController else {return}
+            self.reflection = vc.reflection
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +38,20 @@ class DetailedReflectionViewController: UIViewController {
         detailsLabel.text = reflection.details ?? ""
 
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard let reflection = reflection else {return}
+        
+        if reflection.success {
+            successLabel.text = "You succeeded! Keep it up!"
+            view.backgroundColor = UIColor(displayP3Red: 76.0/255.0, green: 217.0/255.0, blue: 100.0/255.0, alpha: 1)
+        }
+        else {
+            successLabel.text = "Hm, not quite... Don't let this get you down though!"
+            view.backgroundColor = UIColor(displayP3Red: 80.0/255.0, green: 86.0/255.0, blue: 204.0/255.0, alpha: 1)
+        }
+        detailsLabel.text = reflection.details ?? ""
     }
 
     override func didReceiveMemoryWarning() {

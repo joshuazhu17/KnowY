@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Reflection Table View Controller-->
+        <!--Reflection history-->
         <scene sceneID="PG4-gf-zaZ">
             <objects>
                 <tableViewController id="jmF-2S-IT7" customClass="ReflectionTableViewController" customModule="KnowY" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,7 +61,7 @@
                             <outlet property="delegate" destination="jmF-2S-IT7" id="Ac9-w5-6Mh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WPs-Dq-Y2b">
+                    <navigationItem key="navigationItem" title="Reflection history" id="WPs-Dq-Y2b">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="gyS-ZS-lUq">
                             <connections>
                                 <segue destination="Nre-66-Q4E" kind="unwind" unwindAction="unwindWithSegueToDetailedGoalViewController:" id="iHN-f1-2jP"/>
@@ -79,7 +79,7 @@
             </objects>
             <point key="canvasLocation" x="1040.8" y="41.829085457271368"/>
         </scene>
-        <!--Title-->
+        <!--Reflection-->
         <scene sceneID="S3m-y0-2h7">
             <objects>
                 <viewController id="jVd-vU-Amv" customClass="DetailedReflectionViewController" customModule="KnowY" customModuleProvider="target" sceneMemberID="viewController">
@@ -106,7 +106,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="d3U-UX-p5K"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="KHo-2y-Im1">
+                    <navigationItem key="navigationItem" title="Reflection" id="KHo-2y-Im1">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="69J-Um-1vE">
+                            <connections>
+                                <segue destination="JRa-mw-pDt" kind="unwind" unwindAction="unwindWithSegueToReflectionTableViewController:" id="0GV-qK-ctC"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="kB7-PG-Sxf">
                             <connections>
                                 <segue destination="jvp-K8-xbR" kind="show" identifier="editReflection" id="wL1-aP-AwC"/>
@@ -119,10 +124,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKg-6M-aiq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="JRa-mw-pDt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1812" y="195.6521739130435"/>
         </scene>
-        <!--Edit Reflection View Controller-->
+        <!--Reflection-->
         <scene sceneID="Rcc-We-2PS">
             <objects>
                 <viewController id="jvp-K8-xbR" customClass="EditReflectionViewController" customModule="KnowY" customModuleProvider="target" sceneMemberID="viewController">
@@ -154,7 +160,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXO-yL-jaN">
-                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="563" width="375" height="60"/>
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.41568627450000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="bA7-PN-4eT"/>
@@ -163,7 +169,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XnI-xz-039" kind="unwind" identifier="done" unwindAction="unwindWithSegueToReflectionTableViewController:" id="ChG-Q0-BbK"/>
+                                    <action selector="doneButtonTapped:" destination="jvp-K8-xbR" eventType="touchUpInside" id="NGA-Xj-cEa"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Input details here!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jun-eu-8yg">
@@ -195,10 +201,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zoZ-pP-20q"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Reflection" id="7ZN-Ec-OKX">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kdW-tz-XLE">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="jvp-K8-xbR" id="kyW-vT-nhA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="detailsTextView" destination="jun-eu-8yg" id="gyO-M8-8Y7"/>
                         <outlet property="doneButton" destination="YXO-yL-jaN" id="Do1-Cw-eUs"/>
                         <outlet property="successSegmentedControl" destination="04k-Vo-CFW" id="Usn-5J-E35"/>
+                        <segue destination="XnI-xz-039" kind="unwind" identifier="newReflectionDone" unwindAction="unwindWithSegueToReflectionTableViewController:" id="vAm-wx-ji8"/>
+                        <segue destination="XnI-xz-039" kind="unwind" identifier="editReflectionDone" unwindAction="unwindWithSegueToDetailedReflectionViewController:" id="hAB-W3-guM"/>
+                        <segue destination="XnI-xz-039" kind="unwind" identifier="editReflectionCanceled" unwindAction="unwindWithSegueToDetailedReflectionViewController:" id="LHO-3G-UxS"/>
+                        <segue destination="XnI-xz-039" kind="unwind" identifier="newReflectionCanceled" unwindAction="unwindWithSegueToReflectionTableViewController:" id="IQS-De-KpZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPS-U9-RwK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -226,6 +245,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="T8e-MR-kKR"/>
+        <segue reference="wL1-aP-AwC"/>
     </inferredMetricsTieBreakers>
 </document>

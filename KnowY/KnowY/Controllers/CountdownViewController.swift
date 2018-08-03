@@ -66,8 +66,7 @@ class CountdownViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //seconds = duration
-        seconds = 5
+        seconds = duration
         timeLeftLabel.text = timeString(time: duration)
         
         runTimer()

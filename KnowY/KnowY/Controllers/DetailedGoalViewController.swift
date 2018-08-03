@@ -15,7 +15,7 @@ class DetailedGoalViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var whyDescription: UILabel!
     @IBOutlet weak var beginButton: UIButton!
-    var goal = Goal()
+    var goal: Goal?
     
     @IBAction func unwindWithSegueToDetailedGoalViewController(_ segue: UIStoryboardSegue) {
         if segue.source is CountdownViewController {
@@ -23,10 +23,16 @@ class DetailedGoalViewController: UIViewController {
                 self.performSegue(withIdentifier: "straightToNewReflection", sender: self)
             }
         }
+        else if segue.source is EditGoalViewController {
+            guard let vc = segue.source as? EditGoalViewController else {return}
+            self.goal = vc.goal
+        }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let goal = goal else {return}
         
         goalNameLabel.text = goal.goalName
         goalDescriptionLabel.text = goal.goalDescription
@@ -45,6 +51,27 @@ class DetailedGoalViewController: UIViewController {
         }
 
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let goal = goal else {return}
+        
+        goalNameLabel.text = goal.goalName
+        goalDescriptionLabel.text = goal.goalDescription
+        whyDescription.text = goal.why
+        
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US")
+        formatter.dateFormat = "h:mm a"
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
+        if let time = goal.reminderTime {
+            timeLabel.text = formatter.string(from: time)
+        }
+        else {
+            timeLabel.text = "Unknown time"
+        }
     }
 
     override func didReceiveMemoryWarning() {

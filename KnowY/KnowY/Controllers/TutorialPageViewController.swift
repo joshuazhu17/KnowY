@@ -2,8 +2,7 @@
 //  TutorialPageViewController.swift
 //  KnowY
 //
-//  Created by Joshua Zhu on 8/2/18.
-//  Copyright © 2018 joshuazhu. All rights reserved.
+//  Code based off https://medium.com/how-to-swift/how-to-create-a-uipageviewcontroller-a948047fb6af
 //
 
 import UIKit

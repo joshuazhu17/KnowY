@@ -4,7 +4,7 @@
 //
 //  Created by Joshua Zhu on 7/24/18.
 //  Copyright © 2018 joshuazhu. All rights reserved.
-//
+//  With code from https://stackoverflow.com/questions/28813339/move-a-view-up-only-when-the-keyboard-covers-an-input-field
 
 import UIKit
 import NotificationCenter
@@ -44,7 +44,6 @@ class EditGoalViewController: UIViewController {
                 whyDescriptionTextView.textColor = UIColor.lightGray
             }
             reminderDatePicker.date = goal.reminderTime ?? Date()
-            navigationController?.isNavigationBarHidden = true
         }
         else {
             goalNameTextField.text = ""
@@ -60,6 +59,23 @@ class EditGoalViewController: UIViewController {
         
         view.addGestureRecognizer(tap)
     }
+    @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
+        if let _ = goal {
+            self.performSegue(withIdentifier: "editGoalCanceled", sender: self)
+        }
+        else {
+            self.performSegue(withIdentifier: "newGoalCanceled", sender: self)
+        }
+    }
+    @IBAction func doneButtonTapped(_ sender: UIButton) {
+        if let _ = goal {
+            self.performSegue(withIdentifier: "editGoalDone", sender: self)
+        }
+        else {
+            self.performSegue(withIdentifier: "newGoalDone", sender: self)
+        }
+    }
+    
     
     deinit {
         deregisterFromKeyboardNotifications()
@@ -77,8 +93,6 @@ class EditGoalViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else {return}
         
-        navigationController?.isNavigationBarHidden = false
-        
         if goalDescriptionTextView.textColor == UIColor.lightGray {
             goalDescriptionTextView.text = ""
         }
@@ -87,7 +101,7 @@ class EditGoalViewController: UIViewController {
         }
         
         switch identifier {
-        case "done" where goal == nil:
+        case "newGoalDone":
             let uuid = UUID().uuidString
             
             NotificationsHelper.createGoalReminder(name: goalNameTextField.text ?? "", date: reminderDatePicker.date, goal: goal, uuid: uuid)
@@ -101,7 +115,7 @@ class EditGoalViewController: UIViewController {
             
             CoreDataHelper.saveGoal()
             
-        case "done" where goal != nil:
+        case "editGoalDone":
             NotificationsHelper.createGoalReminder(name: goalNameTextField.text ?? "", date: reminderDatePicker.date, goal: goal, uuid: goal!.uuid!)
             
             goal?.goalName = goalNameTextField.text ?? ""
@@ -111,9 +125,11 @@ class EditGoalViewController: UIViewController {
             
             CoreDataHelper.saveGoal()
             
-        case "cancelToConfirmation":
-            print ("canceled")
+        case "newGoalCanceled":
+            print ("canceled new goal")
             
+        case "editGoalCanceled":
+            print("canceled edit")
         default:
             print("Unexpected segue")
         }

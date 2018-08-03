@@ -49,6 +49,22 @@ class EditReflectionViewController: UIViewController {
     
 
     
+    @IBAction func doneButtonTapped(_ sender: UIButton) {
+        if let _ = reflection {
+            self.performSegue(withIdentifier: "editReflectionDone", sender: self)
+        }
+        else {
+            self.performSegue(withIdentifier: "newReflectionDone", sender: self)
+        }
+    }
+    @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
+        if let _ = reflection {
+            self.performSegue(withIdentifier: "editReflectionCanceled", sender: self)
+        }
+        else {
+            self.performSegue(withIdentifier: "newReflectionCanceled", sender: self)
+        }
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -58,31 +74,38 @@ class EditReflectionViewController: UIViewController {
         guard let identifier = segue.identifier else {return}
         
         switch identifier {
-        case "done":
-            if let reflection = reflection {
-                reflection.details = detailsTextView.text
-                if successSegmentedControl.selectedSegmentIndex == 0 {
-                    reflection.success = true
-                }
-                else {
-                    reflection.success = false
-                }
-                CoreDataHelper.saveGoal()
+        case "editReflectionDone":
+            guard let reflection = reflection else {return}
+            reflection.details = detailsTextView.text
+            if successSegmentedControl.selectedSegmentIndex == 0 {
+                reflection.success = true
             }
             else {
-                let reflection = CoreDataHelper.newReflection()
-                guard let goal = goal else {return}
-                reflection.goaluuid = goal.uuid
-                reflection.date = Date()
-                reflection.details = detailsTextView.text
-                if successSegmentedControl.selectedSegmentIndex == 0 {
-                    reflection.success = true
-                }
-                else {
-                    reflection.success = false
-                }
-                CoreDataHelper.saveGoal()
+                reflection.success = false
             }
+            self.reflection = reflection
+            CoreDataHelper.saveGoal()
+            
+        case "newReflectionDone":
+            let reflection = CoreDataHelper.newReflection()
+            guard let goal = goal else {return}
+            reflection.goaluuid = goal.uuid
+            reflection.date = Date()
+            reflection.details = detailsTextView.text
+            if successSegmentedControl.selectedSegmentIndex == 0 {
+                reflection.success = true
+            }
+            else {
+                reflection.success = false
+            }
+            CoreDataHelper.saveGoal()
+            
+        case "editReflectionCanceled":
+            print("Canceled editting")
+            
+        case "newReflectionCanceled":
+            print("Canceled new reflection")
+            
         default:
             print("unidentified segue in edit reflection view controller")
         }
