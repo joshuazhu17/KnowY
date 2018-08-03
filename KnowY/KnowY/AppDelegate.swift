@@ -120,10 +120,19 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         //add code later
-        UserDefaults.standard.set(response.notification.request.identifier, forKey: Constants.UserDefaults.notificationuuid)
-        window?.rootViewController = UIStoryboard(name: "Main", bundle: .main).instantiateInitialViewController()
+        let id = response.notification.request.identifier
+        var isValid = false
+        for goal in CoreDataHelper.retrieveGoals() {
+            if goal.uuid == id {
+                isValid = true
+                break
+            }
+        }
+        if isValid {
+            UserDefaults.standard.set(id, forKey: Constants.UserDefaults.notificationuuid)
+            window?.rootViewController = UIStoryboard(name: "Main", bundle: .main).instantiateInitialViewController()
+        }
         completionHandler()
-        
     }
     
 }
