@@ -19,6 +19,7 @@ class EditGoalViewController: UIViewController {
     @IBOutlet weak var goalNameTextField: UITextField!
     @IBOutlet weak var goalDescriptionTextView: UITextView!
     @IBOutlet weak var reminderDatePicker: UIDatePicker!
+    @IBOutlet weak var whyLabel: UILabel!
     @IBOutlet weak var whyDescriptionTextView: UITextView!
     @IBOutlet weak var doneButton: UIButton!
     override func viewDidLoad() {
@@ -26,10 +27,14 @@ class EditGoalViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        goalNameTextField.layer.cornerRadius = 8
-        goalDescriptionTextView.layer.cornerRadius = 8
-        reminderDatePicker.layer.cornerRadius = 8
-        whyDescriptionTextView.layer.cornerRadius = 8
+        goalNameTextField.layer.cornerRadius = 12
+        goalDescriptionTextView.layer.cornerRadius = 12
+        reminderDatePicker.layer.cornerRadius = 12
+        reminderDatePicker.backgroundColor = UIColor.white
+        reminderDatePicker.layer.masksToBounds = true
+        whyDescriptionTextView.layer.cornerRadius = 12
+        whyLabel.layer.cornerRadius = 12
+        whyLabel.layer.masksToBounds = true
         
         registerForKeyboardNotifications()
         
