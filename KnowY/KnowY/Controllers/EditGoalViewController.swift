@@ -26,6 +26,11 @@ class EditGoalViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        goalNameTextField.layer.cornerRadius = 8
+        goalDescriptionTextView.layer.cornerRadius = 8
+        reminderDatePicker.layer.cornerRadius = 8
+        whyDescriptionTextView.layer.cornerRadius = 8
+        
         registerForKeyboardNotifications()
         
         goalDescriptionTextView.delegate = self
