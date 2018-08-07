@@ -15,6 +15,7 @@ class FirstTutorialLastPageViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        doneButton.layer.cornerRadius = 12
     }
 
     override func didReceiveMemoryWarning() {
