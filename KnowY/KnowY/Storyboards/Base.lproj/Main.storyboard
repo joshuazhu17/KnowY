@@ -88,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="1436" y="147.97601199400302"/>
         </scene>
-        <!--Confirmation View Controller-->
+        <!--Confirmation-->
         <scene sceneID="LTG-vy-pQy">
             <objects>
                 <viewController id="aZs-ap-Zur" customClass="ConfirmationViewController" customModule="KnowY" customModuleProvider="target" sceneMemberID="viewController">
@@ -153,7 +153,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pZO-di-dCR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qFs-cN-xzL"/>
+                    <navigationItem key="navigationItem" title="Confirmation" id="qFs-cN-xzL"/>
                     <connections>
                         <outlet property="noButton" destination="I1f-AT-AhV" id="DG9-lO-3QJ"/>
                         <outlet property="yesButton" destination="JsF-Ve-Qcg" id="MO0-Ne-OPx"/>
@@ -227,13 +227,12 @@
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eur-7M-PDO">
                                                         <rect key="frame" x="122.5" y="320" width="70" height="45"/>
-                                                        <color key="backgroundColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Bw3-zN-yVx"/>
                                                             <constraint firstAttribute="height" constant="45" id="fJn-PK-sts"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                                                        <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write &quot;why&quot; here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b9E-Xe-zpl">
@@ -326,7 +325,7 @@
             </objects>
             <point key="canvasLocation" x="3021.5999999999999" y="-100.29985007496252"/>
         </scene>
-        <!--Detailed Goal View Controller-->
+        <!--Goal-->
         <scene sceneID="v9r-gK-2RB">
             <objects>
                 <viewController storyboardIdentifier="DetailedGoalViewController" id="rED-iP-nwy" customClass="DetailedGoalViewController" customModule="KnowY" customModuleProvider="target" sceneMemberID="viewController">
@@ -380,13 +379,12 @@
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ad-Il-Hfb">
                                         <rect key="frame" x="122.5" y="300" width="70" height="45"/>
-                                        <color key="backgroundColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="9d3-ht-WNQ"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="wDc-II-u08"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Why description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fKj-Y6-lWt">
@@ -412,8 +410,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
                                         <color key="backgroundColor" red="0.1843137255" green="0.28235294119999998" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                        <state key="normal" title="History">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Reflections">
+                                            <color key="titleColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <segue destination="AaC-XM-tOB" kind="show" identifier="showReflections" id="hU7-FJ-e3r"/>
@@ -426,8 +424,8 @@
                                             <constraint firstAttribute="height" constant="60" id="4a5-pW-RK8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                        <state key="normal" title="Start a session">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Start a timer">
+                                            <color key="titleColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <segue destination="MuD-KI-RDO" kind="show" identifier="beginTimer" id="nET-29-yT8"/>
@@ -451,7 +449,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FtN-eN-YP7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zda-Qt-Oxg">
+                    <navigationItem key="navigationItem" title="Goal" id="zda-Qt-Oxg">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="2xb-KA-Wg6">
                             <connections>
                                 <segue destination="1oZ-8U-Itw" kind="unwind" identifier="backFromDetailToTableGoal" unwindAction="unwindWithSegueToGoalTableViewController:" id="S0S-zA-brV"/>
@@ -502,6 +500,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="053-xL-IvA">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.10196078431372549" green="0.5607843137254902" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
