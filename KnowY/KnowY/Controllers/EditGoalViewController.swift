@@ -30,7 +30,7 @@ class EditGoalViewController: UIViewController {
         goalNameTextField.layer.cornerRadius = 12
         goalDescriptionTextView.layer.cornerRadius = 12
         reminderDatePicker.layer.cornerRadius = 12
-        reminderDatePicker.backgroundColor = UIColor.white
+        reminderDatePicker.backgroundColor = UIColor.init(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1)
         reminderDatePicker.layer.masksToBounds = true
         whyDescriptionTextView.layer.cornerRadius = 12
         whyLabel.layer.cornerRadius = 12
