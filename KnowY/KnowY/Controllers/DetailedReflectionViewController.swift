@@ -24,32 +24,22 @@ class DetailedReflectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        guard let reflection = reflection else {return}
-        
-        if reflection.success {
-            successLabel.text = "You succeeded! Keep it up!"
-            view.backgroundColor = UIColor(displayP3Red: 76.0/255.0, green: 217.0/255.0, blue: 100.0/255.0, alpha: 1)
-        }
-        else {
-            successLabel.text = "Hm, not quite... Don't let this get you down though!"
-            view.backgroundColor = UIColor(displayP3Red: 80.0/255.0, green: 86.0/255.0, blue: 204.0/255.0, alpha: 1)
-        }
-        detailsLabel.text = reflection.details ?? ""
-
-        // Do any additional setup after loading the view.
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard let reflection = reflection else {return}
         
+        successLabel.layer.cornerRadius = 12
+        successLabel.layer.masksToBounds = true
+        
         if reflection.success {
             successLabel.text = "You succeeded! Keep it up!"
-            view.backgroundColor = UIColor(displayP3Red: 219.0/255.0, green: 255.0/255.0, blue: 199.0/255.0, alpha: 1)
+            successLabel.backgroundColor = UIColor(displayP3Red: 76.0/255.0, green: 217.0/255.0, blue: 100.0/255.0, alpha: 1)
         }
         else {
-            successLabel.text = "Hm, not quite... Don't let this get you down though!"
-            view.backgroundColor = UIColor(displayP3Red: 80.0/255.0, green: 86.0/255.0, blue: 204.0/255.0, alpha: 1)
+            successLabel.text = "Hm, not quite... Perhaps you should reconsider your motivations"
+            successLabel.backgroundColor = UIColor(displayP3Red: 88.0/255.0, green: 86.0/255.0, blue: 214.0/255.0, alpha: 1)
         }
         detailsLabel.text = reflection.details ?? ""
     }

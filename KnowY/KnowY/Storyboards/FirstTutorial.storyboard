@@ -26,28 +26,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Welcome to KnowY. We want to help you get things done by  reminding you why you want to do them." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jT-tR-N81">
-                                <rect key="frame" x="25" y="47" width="325" height="352"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to KnowY. We want to help you get things done by reminding you why you want to do them." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jT-tR-N81">
+                                <rect key="frame" x="25" y="70" width="325" height="116.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="qI0-1S-Xjl">
-                                <rect key="frame" x="168" y="610" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="qI0-1S-Xjl">
+                                <rect key="frame" x="150" y="610" width="75" height="37"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.49803921568627452" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ZLg-lp-W9f" firstAttribute="trailing" secondItem="1jT-tR-N81" secondAttribute="trailing" constant="25" id="8XC-JN-VuU"/>
+                            <constraint firstItem="qI0-1S-Xjl" firstAttribute="leading" secondItem="ZLg-lp-W9f" secondAttribute="leading" constant="150" id="9t0-vf-0m3"/>
                             <constraint firstItem="1jT-tR-N81" firstAttribute="leading" secondItem="ZLg-lp-W9f" secondAttribute="leading" constant="25" id="FrH-Lf-K3U"/>
+                            <constraint firstItem="ZLg-lp-W9f" firstAttribute="bottom" secondItem="qI0-1S-Xjl" secondAttribute="bottom" constant="20" id="YZd-S9-IAJ"/>
+                            <constraint firstItem="1jT-tR-N81" firstAttribute="top" secondItem="ZLg-lp-W9f" secondAttribute="top" constant="50" id="iTz-0T-WSt"/>
+                            <constraint firstItem="ZLg-lp-W9f" firstAttribute="trailing" secondItem="qI0-1S-Xjl" secondAttribute="trailing" constant="150" id="xTp-xa-k7L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZLg-lp-W9f"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69b-Ps-WD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-911.20000000000005" y="734.48275862068976"/>
+            <point key="canvasLocation" x="-1734" y="741"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dnJ-z8-hl7">
@@ -57,82 +60,125 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tap on the + button when you want to create a new goal." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhA-SV-AQ5">
-                                <rect key="frame" x="25" y="99" width="325" height="177"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on the + button to create a new goal." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhA-SV-AQ5">
+                                <rect key="frame" x="25" y="70" width="325" height="58.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="wwt-OG-mS8">
-                                <rect key="frame" x="168" y="610" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="wwt-OG-mS8">
+                                <rect key="frame" x="150" y="610" width="75" height="37"/>
                             </pageControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.13333333333333333" green="0.32549019607843138" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="UtF-v5-UYl" firstAttribute="trailing" secondItem="rhA-SV-AQ5" secondAttribute="trailing" constant="25" id="1SV-5W-8Om"/>
                             <constraint firstItem="rhA-SV-AQ5" firstAttribute="leading" secondItem="UtF-v5-UYl" secondAttribute="leading" constant="25" id="CcQ-2Y-EIJ"/>
+                            <constraint firstItem="UtF-v5-UYl" firstAttribute="bottom" secondItem="wwt-OG-mS8" secondAttribute="bottom" constant="20" id="JEc-nh-zCS"/>
+                            <constraint firstItem="wwt-OG-mS8" firstAttribute="leading" secondItem="UtF-v5-UYl" secondAttribute="leading" constant="150" id="JHe-nb-bMg"/>
+                            <constraint firstItem="UtF-v5-UYl" firstAttribute="trailing" secondItem="wwt-OG-mS8" secondAttribute="trailing" constant="150" id="XEn-0y-q8f"/>
+                            <constraint firstItem="rhA-SV-AQ5" firstAttribute="top" secondItem="UtF-v5-UYl" secondAttribute="top" constant="50" id="snb-lg-8bq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UtF-v5-UYl"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nl-NY-IMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214" y="742"/>
+            <point key="canvasLocation" x="-1041" y="742"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="h9u-3l-BXl">
+            <objects>
+                <viewController storyboardIdentifier="page3" id="GCR-6p-7PB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N2v-ww-Zxu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Then, just fill in the fields. You'll get a reminder everyday at the reminder time." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ch3-kl-BMF">
+                                <rect key="frame" x="25" y="70" width="325" height="116.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="cK9-O6-65d">
+                                <rect key="frame" x="150" y="610" width="75" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ch3-kl-BMF" firstAttribute="leading" secondItem="X9u-a0-odS" secondAttribute="leading" constant="25" id="5Jj-Se-PxJ"/>
+                            <constraint firstItem="X9u-a0-odS" firstAttribute="trailing" secondItem="Ch3-kl-BMF" secondAttribute="trailing" constant="25" id="AmU-g0-ciM"/>
+                            <constraint firstItem="X9u-a0-odS" firstAttribute="trailing" secondItem="cK9-O6-65d" secondAttribute="trailing" constant="150" id="JIx-BF-at9"/>
+                            <constraint firstItem="X9u-a0-odS" firstAttribute="bottom" secondItem="cK9-O6-65d" secondAttribute="bottom" constant="20" id="ZUN-hI-p5F"/>
+                            <constraint firstItem="cK9-O6-65d" firstAttribute="leading" secondItem="X9u-a0-odS" secondAttribute="leading" constant="150" id="lu7-qR-erh"/>
+                            <constraint firstItem="Ch3-kl-BMF" firstAttribute="top" secondItem="X9u-a0-odS" secondAttribute="top" constant="50" id="pe4-pM-349"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X9u-a0-odS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rK0-ZZ-EzB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-390" y="742"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="49T-8H-uRo">
             <objects>
-                <viewController storyboardIdentifier="page3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ofJ-Wu-Czy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ofJ-Wu-Czy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iVf-8g-UfI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="To create a goal, first input the name, a short description, and a reminder time." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNb-W9-hS5">
-                                <rect key="frame" x="25" y="37" width="325" height="278"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="After getting the reminder, you can set a timer for yourself to work on it with &quot;Start a session&quot;." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNb-W9-hS5">
+                                <rect key="frame" x="25" y="70" width="325" height="116.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="dp6-bL-yZh">
-                                <rect key="frame" x="168" y="603" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="dp6-bL-yZh">
+                                <rect key="frame" x="150" y="610" width="75" height="37"/>
                             </pageControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.086274509803921567" green="0.58431372549019611" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ZNb-W9-hS5" firstAttribute="top" secondItem="Ymz-NY-EDN" secondAttribute="top" constant="50" id="CtU-xl-yJW"/>
+                            <constraint firstItem="dp6-bL-yZh" firstAttribute="leading" secondItem="Ymz-NY-EDN" secondAttribute="leading" constant="150" id="M2z-r5-M3m"/>
                             <constraint firstItem="ZNb-W9-hS5" firstAttribute="leading" secondItem="Ymz-NY-EDN" secondAttribute="leading" constant="25" id="eWk-sJ-JPv"/>
+                            <constraint firstItem="Ymz-NY-EDN" firstAttribute="bottom" secondItem="dp6-bL-yZh" secondAttribute="bottom" constant="20" id="jdP-Fc-E1F"/>
                             <constraint firstItem="Ymz-NY-EDN" firstAttribute="trailing" secondItem="ZNb-W9-hS5" secondAttribute="trailing" constant="25" id="pgF-da-hj1"/>
+                            <constraint firstItem="Ymz-NY-EDN" firstAttribute="trailing" secondItem="dp6-bL-yZh" secondAttribute="trailing" constant="150" id="xNe-3s-rPS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ymz-NY-EDN"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgp-vD-NOL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="586" y="742"/>
+            <point key="canvasLocation" x="260" y="742"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sK0-13-1B3">
             <objects>
-                <viewController storyboardIdentifier="page4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LxJ-a7-4Wr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LxJ-a7-4Wr" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AvT-Fe-jdy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="RY8-8G-gDb">
-                                <rect key="frame" x="168" y="610" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="4" translatesAutoresizingMaskIntoConstraints="NO" id="RY8-8G-gDb">
+                                <rect key="frame" x="150" y="610" width="75" height="37"/>
                             </pageControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The most important part is to write why you want to achieve the goal. Make sure you're convinced by it!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jD6-gq-6eZ">
-                                <rect key="frame" x="25" y="48" width="325" height="248"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Once the timer's done, it'll automatically take you to create a reflection." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jD6-gq-6eZ">
+                                <rect key="frame" x="25" y="70" width="325" height="87.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.67450980392156867" green="0.94117647058823528" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="RY8-8G-gDb" firstAttribute="leading" secondItem="b9A-pe-nlq" secondAttribute="leading" constant="150" id="9jp-BK-rO9"/>
+                            <constraint firstItem="b9A-pe-nlq" firstAttribute="bottom" secondItem="RY8-8G-gDb" secondAttribute="bottom" constant="20" id="F5F-yo-R6i"/>
                             <constraint firstItem="jD6-gq-6eZ" firstAttribute="leading" secondItem="b9A-pe-nlq" secondAttribute="leading" constant="25" id="PIG-1g-PXp"/>
+                            <constraint firstItem="jD6-gq-6eZ" firstAttribute="top" secondItem="b9A-pe-nlq" secondAttribute="top" constant="50" id="QCU-r3-PsL"/>
+                            <constraint firstItem="b9A-pe-nlq" firstAttribute="trailing" secondItem="RY8-8G-gDb" secondAttribute="trailing" constant="150" id="mWU-ix-vdM"/>
                             <constraint firstItem="b9A-pe-nlq" firstAttribute="trailing" secondItem="jD6-gq-6eZ" secondAttribute="trailing" constant="25" id="xML-Q9-TTZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b9A-pe-nlq"/>
@@ -140,27 +186,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ln-A9-ueH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1272.8" y="741.67916041979015"/>
+            <point key="canvasLocation" x="956" y="742"/>
         </scene>
         <!--First Tutorial Last Page View Controller-->
         <scene sceneID="WNY-JS-qkT">
             <objects>
-                <viewController storyboardIdentifier="page5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vqM-65-LZl" customClass="FirstTutorialLastPageViewController" customModule="KnowY" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page6" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vqM-65-LZl" customClass="FirstTutorialLastPageViewController" customModule="KnowY" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VZM-P9-qg6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="That's it! We'll send you a notification when the time comes so that you can check back here." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T3-ai-oCA">
-                                <rect key="frame" x="25" y="20" width="325" height="289"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can see all your reflections in history." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T3-ai-oCA">
+                                <rect key="frame" x="25" y="70" width="325" height="58.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWA-97-end">
-                                <rect key="frame" x="79" y="516" width="216" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.69019607843137254" green="0.70588235294117641" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Done">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWA-97-end">
+                                <rect key="frame" x="80" y="520" width="215" height="60"/>
+                                <color key="backgroundColor" red="0.3921568627" green="0.41960784309999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Viq-zM-BHh"/>
+                                </constraints>
+                                <state key="normal" title="Ok, got it!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -168,15 +216,21 @@
                                     <segue destination="agl-qj-hBD" kind="show" id="9Vn-yP-66K"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" currentPage="4" translatesAutoresizingMaskIntoConstraints="NO" id="KCc-5M-Qp5">
-                                <rect key="frame" x="168" y="600" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="5" translatesAutoresizingMaskIntoConstraints="NO" id="KCc-5M-Qp5">
+                                <rect key="frame" x="150" y="610" width="75" height="37"/>
                             </pageControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.95294117647058818" green="1" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="KWA-97-end" firstAttribute="leading" secondItem="ADs-L2-zcJ" secondAttribute="leading" constant="80" id="1kB-IF-Qth"/>
                             <constraint firstItem="ADs-L2-zcJ" firstAttribute="trailing" secondItem="4T3-ai-oCA" secondAttribute="trailing" constant="25" id="Cyi-wP-e8f"/>
+                            <constraint firstItem="ADs-L2-zcJ" firstAttribute="trailing" secondItem="KWA-97-end" secondAttribute="trailing" constant="80" id="Pok-Zx-3TE"/>
+                            <constraint firstItem="ADs-L2-zcJ" firstAttribute="bottom" secondItem="KCc-5M-Qp5" secondAttribute="bottom" constant="20" id="WiB-Xm-g82"/>
+                            <constraint firstItem="KCc-5M-Qp5" firstAttribute="top" secondItem="KWA-97-end" secondAttribute="bottom" constant="30" id="X7r-gA-MWd"/>
+                            <constraint firstItem="KCc-5M-Qp5" firstAttribute="leading" secondItem="ADs-L2-zcJ" secondAttribute="leading" constant="150" id="ahc-PE-ifj"/>
                             <constraint firstItem="4T3-ai-oCA" firstAttribute="leading" secondItem="ADs-L2-zcJ" secondAttribute="leading" constant="25" id="b15-sn-Rd2"/>
+                            <constraint firstItem="4T3-ai-oCA" firstAttribute="top" secondItem="ADs-L2-zcJ" secondAttribute="top" constant="50" id="eBs-up-Xsg"/>
+                            <constraint firstItem="ADs-L2-zcJ" firstAttribute="trailing" secondItem="KCc-5M-Qp5" secondAttribute="trailing" constant="150" id="svr-HH-FAD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ADs-L2-zcJ"/>
                     </view>
@@ -186,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8n-nv-x33" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2048.8000000000002" y="741.67916041979015"/>
+            <point key="canvasLocation" x="1697" y="741"/>
         </scene>
         <!--Main-->
         <scene sceneID="CNF-bY-3OO">
@@ -194,7 +248,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="agl-qj-hBD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6a-dd-Vdt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2604" y="882"/>
+            <point key="canvasLocation" x="2218" y="741"/>
         </scene>
     </scenes>
 </document>

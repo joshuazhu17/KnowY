@@ -15,7 +15,8 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerDele
             self.getViewController(withIdentifier: "page2"),
             self.getViewController(withIdentifier: "page3"),
             self.getViewController(withIdentifier: "page4"),
-            self.getViewController(withIdentifier: "page5")
+            self.getViewController(withIdentifier: "page5"),
+            self.getViewController(withIdentifier: "page6")
         ]
     }()
     
