@@ -17,6 +17,9 @@ class NewTimerViewController: UIViewController {
         durationDatePicker.countDownDuration = 60.0
 
         // Do any additional setup after loading the view.
+        durationDatePicker.layer.cornerRadius = 12
+        durationDatePicker.layer.masksToBounds = true
+        durationDatePicker.backgroundColor = UIColor.white
         startButton.layer.cornerRadius = 12
     }
     

@@ -11,9 +11,10 @@ import UIKit
 class DetailedGoalViewController: UIViewController {
     
     @IBOutlet weak var goalNameLabel: UILabel!
-    @IBOutlet weak var goalDescriptionLabel: UILabel!
+    @IBOutlet weak var goalDescriptionTextView: UITextView!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var whyDescription: UILabel!
+    @IBOutlet weak var whyLabel: UILabel!
+    @IBOutlet weak var whyDescriptionTextView: UITextView!
     @IBOutlet weak var beginButton: UIButton!
     var goal: Goal?
     
@@ -31,35 +32,28 @@ class DetailedGoalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        guard let goal = goal else {return}
-        
-        goalNameLabel.text = goal.goalName
-        goalDescriptionLabel.text = goal.goalDescription
-        whyDescription.text = goal.why
-        
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_US")
-        formatter.dateFormat = "h:mm a"
-        formatter.amSymbol = "AM"
-        formatter.pmSymbol = "PM"
-        if let time = goal.reminderTime {
-            timeLabel.text = formatter.string(from: time)
-        }
-        else {
-            timeLabel.text = "Unknown time"
-        }
-
-        // Do any additional setup after loading the view.
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         guard let goal = goal else {return}
         
+        goalNameLabel.layer.cornerRadius = 12
+        goalNameLabel.layer.masksToBounds = true
+        goalDescriptionTextView.layer.cornerRadius = 12
+        timeLabel.layer.cornerRadius = 12
+        timeLabel.layer.masksToBounds = true
+        whyLabel.layer.cornerRadius = 12
+        whyLabel.layer.masksToBounds = true
+        whyDescriptionTextView.layer.cornerRadius = 12
+        
+        
         goalNameLabel.text = goal.goalName
-        goalDescriptionLabel.text = goal.goalDescription
-        whyDescription.text = goal.why
+        goalDescriptionTextView.text = goal.goalDescription
+        whyDescriptionTextView.text = goal.why
+        goalDescriptionTextView.isEditable = false
+        whyDescriptionTextView.isEditable = false
         
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US")

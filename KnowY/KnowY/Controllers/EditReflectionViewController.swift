@@ -28,10 +28,22 @@ class EditReflectionViewController: UIViewController {
                 successSegmentedControl.selectedSegmentIndex = 1
             }
             let details = reflection.details ?? ""
-            detailsTextView.text = details
+            if details.isEmpty {
+                detailsTextView.text = "Write details here"
+                detailsTextView.textColor = UIColor.lightGray
+            }
+            else {
+                detailsTextView.text = details
+            }
+        }
+        else {
+            detailsTextView.text = "Write details here"
+            detailsTextView.textColor = UIColor.lightGray
         }
 
         // Do any additional setup after loading the view.
+        
+        detailsTextView.delegate = self
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(EditGoalViewController.dismissKeyboard))
         
@@ -71,6 +83,10 @@ class EditReflectionViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if detailsTextView.textColor == UIColor.lightGray {
+            detailsTextView.text = ""
+        }
         guard let identifier = segue.identifier else {return}
         
         switch identifier {
@@ -110,6 +126,21 @@ class EditReflectionViewController: UIViewController {
             print("unidentified segue in edit reflection view controller")
         }
     }
-    
+}
 
+extension EditReflectionViewController: UITextViewDelegate {
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Write details here"
+            textView.textColor = UIColor.lightGray
+        }
+    }
 }

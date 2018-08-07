@@ -18,27 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="H1D-TO-ZZ8">
-                                <rect key="frame" x="0.0" y="164" width="375" height="175"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="175" id="Uqw-qQ-6jr"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="554158752.00816202">
-                                    <!--2018-07-24 20:59:12 +0000-->
-                                </date>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long would you like to work?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TL-eL-gYi">
                                 <rect key="frame" x="0.0" y="64" width="375" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="00g-Xk-ItI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5H-j6-dTD">
                                 <rect key="frame" x="60" y="417" width="255" height="150"/>
-                                <color key="backgroundColor" red="0.69019607839999997" green="0.70588235290000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="yFc-Pv-7h2"/>
                                 </constraints>
@@ -50,18 +40,28 @@
                                     <segue destination="4FD-33-VNE" kind="show" identifier="startCountdown" id="BOx-Qa-7Ld"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="H1D-TO-ZZ8">
+                                <rect key="frame" x="40" y="184" width="295" height="175"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="Uqw-qQ-6jr"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="554158752.00816202">
+                                    <!--2018-07-24 20:59:12 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
-                        <color key="backgroundColor" red="0.3921568627" green="0.41960784309999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.94596354169999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OlH-dY-Mg1" firstAttribute="trailing" secondItem="9TL-eL-gYi" secondAttribute="trailing" id="0Ml-Kq-DKC"/>
                             <constraint firstItem="9TL-eL-gYi" firstAttribute="top" secondItem="OlH-dY-Mg1" secondAttribute="top" id="2bA-9m-j0Q"/>
-                            <constraint firstItem="H1D-TO-ZZ8" firstAttribute="trailing" secondItem="OlH-dY-Mg1" secondAttribute="trailing" id="7fL-96-mBh"/>
                             <constraint firstItem="T5H-j6-dTD" firstAttribute="leading" secondItem="OlH-dY-Mg1" secondAttribute="leading" constant="60" id="AIM-xm-gGP"/>
                             <constraint firstItem="9TL-eL-gYi" firstAttribute="leading" secondItem="OlH-dY-Mg1" secondAttribute="leading" id="CYt-yH-d2T"/>
-                            <constraint firstItem="H1D-TO-ZZ8" firstAttribute="top" secondItem="9TL-eL-gYi" secondAttribute="bottom" id="HUK-0n-bU3"/>
-                            <constraint firstItem="H1D-TO-ZZ8" firstAttribute="leading" secondItem="OlH-dY-Mg1" secondAttribute="leading" id="STl-e0-dhq"/>
+                            <constraint firstItem="OlH-dY-Mg1" firstAttribute="trailing" secondItem="H1D-TO-ZZ8" secondAttribute="trailing" constant="40" id="MNh-yx-TZx"/>
                             <constraint firstItem="OlH-dY-Mg1" firstAttribute="trailing" secondItem="T5H-j6-dTD" secondAttribute="trailing" constant="60" id="WnI-aV-E1h"/>
+                            <constraint firstItem="H1D-TO-ZZ8" firstAttribute="top" secondItem="9TL-eL-gYi" secondAttribute="bottom" constant="20" id="im8-Ld-7md"/>
                             <constraint firstItem="OlH-dY-Mg1" firstAttribute="bottom" secondItem="T5H-j6-dTD" secondAttribute="bottom" constant="100" id="reg-mW-sgM"/>
+                            <constraint firstItem="H1D-TO-ZZ8" firstAttribute="leading" secondItem="OlH-dY-Mg1" secondAttribute="leading" constant="40" id="seT-uM-ojL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OlH-dY-Mg1"/>
                     </view>
@@ -91,26 +91,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lem-mN-PNT">
-                                <rect key="frame" x="0.0" y="64" width="375" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="rce-qY-yKe"/>
-                                </constraints>
+                                <rect key="frame" x="60" y="84" width="255" height="73"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The timer doesn't run if you quit the app, so it's your loss" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7x-mM-IA5">
-                                <rect key="frame" x="0.0" y="264" width="375" height="120"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The timer doesn't run if you quit the app, so keep it open" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7x-mM-IA5">
+                                <rect key="frame" x="40" y="197" width="295" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="4au-L3-UU0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myp-6k-Ntr">
                                 <rect key="frame" x="60" y="417" width="255" height="150"/>
-                                <color key="backgroundColor" red="0.69019607839999997" green="0.70588235290000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="ZFe-kC-iR3"/>
                                 </constraints>
@@ -123,17 +119,18 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.3921568627" green="0.41960784309999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.94596354169999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="k7x-mM-IA5" firstAttribute="leading" secondItem="Gj4-7P-BvP" secondAttribute="leading" id="3mU-9U-w8e"/>
+                            <constraint firstItem="k7x-mM-IA5" firstAttribute="leading" secondItem="Gj4-7P-BvP" secondAttribute="leading" constant="40" id="3mU-9U-w8e"/>
+                            <constraint firstItem="Gj4-7P-BvP" firstAttribute="trailing" secondItem="lem-mN-PNT" secondAttribute="trailing" constant="60" id="8nt-HG-apy"/>
+                            <constraint firstItem="myp-6k-Ntr" firstAttribute="top" secondItem="k7x-mM-IA5" secondAttribute="bottom" constant="100" id="90r-rS-KMi"/>
+                            <constraint firstItem="lem-mN-PNT" firstAttribute="leading" secondItem="Gj4-7P-BvP" secondAttribute="leading" constant="60" id="Ea2-ZW-dvj"/>
                             <constraint firstItem="Gj4-7P-BvP" firstAttribute="bottom" secondItem="myp-6k-Ntr" secondAttribute="bottom" constant="100" id="FYp-yh-JIz"/>
-                            <constraint firstItem="lem-mN-PNT" firstAttribute="top" secondItem="Gj4-7P-BvP" secondAttribute="top" id="TGO-IE-FET"/>
-                            <constraint firstItem="k7x-mM-IA5" firstAttribute="top" secondItem="lem-mN-PNT" secondAttribute="bottom" constant="50" id="bUc-LD-foC"/>
+                            <constraint firstItem="Gj4-7P-BvP" firstAttribute="trailing" secondItem="k7x-mM-IA5" secondAttribute="trailing" constant="40" id="KKF-yQ-p3O"/>
+                            <constraint firstItem="lem-mN-PNT" firstAttribute="top" secondItem="Gj4-7P-BvP" secondAttribute="top" constant="20" id="Wir-SM-Pcr"/>
                             <constraint firstItem="myp-6k-Ntr" firstAttribute="leading" secondItem="Gj4-7P-BvP" secondAttribute="leading" constant="60" id="hEo-QL-iJl"/>
                             <constraint firstItem="Gj4-7P-BvP" firstAttribute="trailing" secondItem="myp-6k-Ntr" secondAttribute="trailing" constant="60" id="itv-BG-FZe"/>
-                            <constraint firstItem="Gj4-7P-BvP" firstAttribute="trailing" secondItem="k7x-mM-IA5" secondAttribute="trailing" id="j18-5m-g1N"/>
-                            <constraint firstItem="Gj4-7P-BvP" firstAttribute="trailing" secondItem="lem-mN-PNT" secondAttribute="trailing" id="jnn-PK-2sP"/>
-                            <constraint firstItem="lem-mN-PNT" firstAttribute="leading" secondItem="Gj4-7P-BvP" secondAttribute="leading" id="wps-p5-xAC"/>
+                            <constraint firstItem="k7x-mM-IA5" firstAttribute="top" secondItem="lem-mN-PNT" secondAttribute="bottom" constant="40" id="u2r-Gb-twY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gj4-7P-BvP"/>
                     </view>
