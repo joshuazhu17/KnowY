@@ -27,29 +27,41 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORv-oL-BYx">
-                                            <rect key="frame" x="31" y="36" width="63" height="48"/>
+                                            <rect key="frame" x="31" y="26" width="63" height="48"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jO-yg-U5F">
-                                            <rect key="frame" x="219.5" y="36" width="114.5" height="48"/>
+                                            <rect key="frame" x="219.5" y="26" width="114.5" height="48"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preview of reflection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOc-KH-OBO">
+                                            <rect key="frame" x="31" y="86" width="140.5" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="Mj5-yB-O4M"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ORv-oL-BYx" firstAttribute="leading" secondItem="xCT-74-cJc" secondAttribute="leadingMargin" constant="15" id="1V2-iZ-Ntd"/>
-                                        <constraint firstItem="ORv-oL-BYx" firstAttribute="top" secondItem="xCT-74-cJc" secondAttribute="topMargin" constant="25" id="Gm7-GU-uzF"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="ORv-oL-BYx" secondAttribute="bottom" constant="25" id="SYV-hT-Fj8"/>
-                                        <constraint firstItem="4jO-yg-U5F" firstAttribute="top" secondItem="xCT-74-cJc" secondAttribute="topMargin" constant="25" id="fo2-Ir-kmF"/>
+                                        <constraint firstItem="ORv-oL-BYx" firstAttribute="top" secondItem="xCT-74-cJc" secondAttribute="topMargin" constant="15" id="Gm7-GU-uzF"/>
+                                        <constraint firstItem="YOc-KH-OBO" firstAttribute="leading" secondItem="xCT-74-cJc" secondAttribute="leadingMargin" constant="15" id="Mqr-UJ-kli"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="YOc-KH-OBO" secondAttribute="bottom" constant="5" id="PCJ-yN-cbh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ORv-oL-BYx" secondAttribute="bottom" constant="35" id="SYV-hT-Fj8"/>
+                                        <constraint firstItem="4jO-yg-U5F" firstAttribute="top" secondItem="xCT-74-cJc" secondAttribute="topMargin" constant="15" id="fo2-Ir-kmF"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="4jO-yg-U5F" secondAttribute="trailing" constant="25" id="jd4-UF-pKh"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="4jO-yg-U5F" secondAttribute="bottom" constant="25" id="vPH-ev-MiB"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4jO-yg-U5F" secondAttribute="bottom" constant="35" id="vPH-ev-MiB"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="dateLabel" destination="ORv-oL-BYx" id="v3p-g1-mGo"/>
+                                    <outlet property="previewLabel" destination="YOc-KH-OBO" id="FCJ-y6-fT6"/>
                                     <outlet property="successLabel" destination="4jO-yg-U5F" id="txE-QP-g2C"/>
                                     <segue destination="jVd-vU-Amv" kind="show" identifier="showReflection" id="cQp-7y-Uek"/>
                                 </connections>
@@ -286,6 +298,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wL1-aP-AwC"/>
+        <segue reference="T8e-MR-kKR"/>
     </inferredMetricsTieBreakers>
 </document>

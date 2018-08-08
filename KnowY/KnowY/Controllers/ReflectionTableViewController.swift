@@ -90,6 +90,7 @@ class ReflectionTableViewController: UITableViewController {
         else {
             cell.successLabel.text = "Failure"
         }
+        cell.previewLabel.text = reflection.details
 
         return cell
     }
