@@ -175,7 +175,7 @@ extension EditGoalViewController: UITextViewDelegate {
         var aRect : CGRect = self.view.frame
         aRect.size.height -= keyboardSize!.height
         if let activeView = self.activeView {
-            if activeView == whyDescriptionTextView {
+            if activeView == goalDescriptionTextView {
                 self.scrollView.scrollRectToVisible(activeView.frame, animated: true)
             }
         }
