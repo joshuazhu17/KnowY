@@ -118,7 +118,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsF-Ve-Qcg">
                                 <rect key="frame" x="30" y="309" width="315" height="48"/>
-                                <color key="backgroundColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.94409483670000005" green="0.57223051790000001" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Yes">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -197,7 +197,7 @@
                                                             <constraint firstAttribute="height" constant="45" id="fJn-PK-sts"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                                                        <color key="textColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.94409483670000005" green="0.57223051790000001" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write &quot;why&quot; here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b9E-Xe-zpl">
@@ -255,7 +255,7 @@
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eA-Qe-sio">
                                                 <rect key="frame" x="0.0" y="543" width="375" height="60"/>
-                                                <color key="backgroundColor" red="0.20000000000000001" green="0.396078431372549" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" red="0.093581929802894592" green="0.32481220364570618" blue="0.48069730401039124" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="ea7-XH-TNp"/>
                                                 </constraints>
@@ -352,7 +352,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="wDc-II-u08"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                                        <color key="textColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.94409483670000005" green="0.57223051790000001" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Why description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fKj-Y6-lWt">
@@ -418,7 +418,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Das-vJ-AuY">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
-                                        <color key="backgroundColor" red="0.20000000000000001" green="0.39607843139999999" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.093581967055797577" green="0.32481217384338379" blue="0.48069721460342407" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="4a5-pW-RK8"/>
                                         </constraints>
@@ -500,7 +500,7 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.94836697048611107" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.92156862750000001" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.94409483670000005" green="0.57223051790000001" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -518,6 +518,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="iwf-kZ-ux3"/>
         <segue reference="RZ6-se-vAe"/>
-        <segue reference="CWL-do-6CQ"/>
+        <segue reference="1LG-Fa-EGa"/>
     </inferredMetricsTieBreakers>
 </document>

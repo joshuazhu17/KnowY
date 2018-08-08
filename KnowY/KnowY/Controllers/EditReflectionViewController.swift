@@ -23,6 +23,9 @@ class EditReflectionViewController: UIViewController {
         super.viewDidLoad()
         registerForKeyboardNotifications()
         
+        detailsTextView.layer.cornerRadius = 12
+        detailsTextView.layer.masksToBounds = true
+        
         if let reflection = reflection {
             if reflection.success {
                 successSegmentedControl.selectedSegmentIndex = 0

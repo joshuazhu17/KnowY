@@ -13,7 +13,7 @@ class DetailedReflectionViewController: UIViewController {
     var reflection: Reflection?
 
     @IBOutlet weak var successLabel: UILabel!
-    @IBOutlet weak var detailsLabel: UILabel!
+    @IBOutlet weak var detailsTextView: UITextView!
     
     @IBAction func unwindWithSegueToDetailedReflectionViewController(_ segue: UIStoryboardSegue) {
         if segue.source is EditReflectionViewController {
@@ -32,16 +32,19 @@ class DetailedReflectionViewController: UIViewController {
         
         successLabel.layer.cornerRadius = 12
         successLabel.layer.masksToBounds = true
+        detailsTextView.text = reflection.details ?? ""
+        detailsTextView.isEditable = false
+        detailsTextView.isSelectable = false
+        detailsTextView.layer.cornerRadius = 12
         
         if reflection.success {
             successLabel.text = "You succeeded! Keep it up!"
-            successLabel.backgroundColor = UIColor(displayP3Red: 235.0/255.0, green: 127.0/255.0, blue: 0.0/255.0, alpha: 1)
+            successLabel.backgroundColor = UIColor(red: 241.0/255.0, green: 146.0/255.0, blue: 0.0/255.0, alpha: 1)
         }
         else {
             successLabel.text = "Hm, not quite... Perhaps you should reconsider your motivations"
-            successLabel.backgroundColor = UIColor(displayP3Red: 51.0/255.0, green: 101.0/255.0, blue: 138.0/255.0, alpha: 1)
+            successLabel.backgroundColor = UIColor(displayP3Red: 27.0/255.0, green: 102.0/255.0, blue: 141.0/255.0, alpha: 1)
         }
-        detailsLabel.text = reflection.details ?? ""
     }
 
     override func didReceiveMemoryWarning() {
