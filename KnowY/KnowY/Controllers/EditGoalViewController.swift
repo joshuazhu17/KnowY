@@ -114,7 +114,7 @@ class EditGoalViewController: UIViewController {
         case "newGoalDone":
             let uuid = UUID().uuidString
             
-            NotificationsHelper.createGoalReminder(name: goalNameTextField.text ?? "", date: reminderDatePicker.date, goal: goal, uuid: uuid)
+            NotificationsHelper.createGoalReminder(name: goalNameTextField.text ?? "", date: Date(), goal: goal, uuid: uuid)
             
             let newGoal = CoreDataHelper.newGoal()
             newGoal.goalName = goalNameTextField.text ?? ""
@@ -175,7 +175,7 @@ extension EditGoalViewController: UITextViewDelegate {
         var aRect : CGRect = self.view.frame
         aRect.size.height -= keyboardSize!.height
         if let activeView = self.activeView {
-            if activeView == whyDescriptionTextView {
+            if activeView == goalDescriptionTextView {
                 self.scrollView.scrollRectToVisible(activeView.frame, animated: true)
             }
         }
