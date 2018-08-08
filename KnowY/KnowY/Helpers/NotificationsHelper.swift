@@ -14,6 +14,9 @@ struct NotificationsHelper {
         
         if let goal = goal {
             self.deleteGoal(goal: goal)
+            if !goal.onOff {
+                return
+            }
         }
         
         let content = UNMutableNotificationContent()

@@ -122,6 +122,7 @@ class EditGoalViewController: UIViewController {
             newGoal.why = whyDescriptionTextView.text ?? ""
             newGoal.reminderTime = reminderDatePicker.date
             newGoal.uuid = uuid
+            newGoal.onOff = true
             
             CoreDataHelper.saveGoal()
             

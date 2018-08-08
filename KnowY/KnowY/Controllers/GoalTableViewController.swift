@@ -77,6 +77,30 @@ class GoalTableViewController: UITableViewController {
         else {
             cell.timeLabel.text = "Unknown time"
         }
+        
+        if goal.onOff {
+            cell.onOffSwitch.setOn(true, animated: true)
+        }
+        else {
+            cell.onOffSwitch.setOn(false, animated: true)
+        }
+        cell.onOffSwitchedAction = { (cell: GoalTableViewCell) in
+            guard let indexPath = tableView.indexPath(for: cell) else { return }
+            let goal = self.goals[indexPath.row]
+            
+            if !cell.onOffSwitch.isOn {
+                goal.onOff = false
+                CoreDataHelper.saveGoal()
+                NotificationsHelper.deleteGoal(goal: goal)
+            }
+            else {
+                goal.onOff = true
+                CoreDataHelper.saveGoal()
+                guard let reminderTime = goal.reminderTime else {return}
+                guard let uuid = goal.uuid else {return}
+                NotificationsHelper.createGoalReminder(name: goal.goalName, date: reminderTime, goal: goal, uuid: uuid)
+            }
+        }
 
         return cell
     }

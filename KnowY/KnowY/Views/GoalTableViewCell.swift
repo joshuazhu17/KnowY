@@ -12,6 +12,11 @@ class GoalTableViewCell: UITableViewCell {
 
     @IBOutlet weak var goalNameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var onOffSwitch: UISwitch!
+    var onOffSwitchedAction: ((GoalTableViewCell) -> Void)? = nil
+    @IBAction func onOffSwitched(_ sender: UISwitch) {
+        onOffSwitchedAction?(self)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

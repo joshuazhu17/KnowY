@@ -158,10 +158,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmM-MM-gp0">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCJ-Wk-AHr" userLabel="Content view">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you succeed?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMT-oM-5lt">
                                                 <rect key="frame" x="40" y="40" width="295" height="29.5"/>
@@ -187,13 +187,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Input details here!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZF6-Fc-6GO">
-                                                <rect key="frame" x="40" y="269.5" width="295" height="149.5"/>
+                                                <rect key="frame" x="40" y="269.5" width="295" height="193.5"/>
                                                 <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAA-CF-5yi">
-                                                <rect key="frame" x="0.0" y="499" width="375" height="60"/>
+                                                <rect key="frame" x="0.0" y="543" width="375" height="60"/>
                                                 <color key="backgroundColor" red="0.093581929802894592" green="0.32481220364570618" blue="0.48069730401039124" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="PeE-kx-pTg"/>
@@ -256,7 +256,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="detailsTextView" destination="ZF6-Fc-6GO" id="hlD-eU-igD"/>
                         <outlet property="doneButton" destination="uAA-CF-5yi" id="DVf-2X-cfI"/>
