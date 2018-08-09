@@ -109,7 +109,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Details here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wb4-sB-ADT">
-                                <rect key="frame" x="50" y="264" width="275" height="223"/>
+                                <rect key="frame" x="50" y="264" width="275" height="263"/>
                                 <color key="backgroundColor" white="0.94836697049999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -117,7 +117,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="d3U-UX-p5K" firstAttribute="bottom" secondItem="wb4-sB-ADT" secondAttribute="bottom" constant="180" id="35M-od-oXr"/>
+                            <constraint firstItem="d3U-UX-p5K" firstAttribute="bottom" secondItem="wb4-sB-ADT" secondAttribute="bottom" constant="140" id="35M-od-oXr"/>
                             <constraint firstItem="wb4-sB-ADT" firstAttribute="leading" secondItem="d3U-UX-p5K" secondAttribute="leading" constant="50" id="JKC-5t-Gws"/>
                             <constraint firstItem="6xA-77-0cH" firstAttribute="leading" secondItem="d3U-UX-p5K" secondAttribute="leading" constant="50" id="Jzm-41-o3i"/>
                             <constraint firstItem="d3U-UX-p5K" firstAttribute="trailing" secondItem="6xA-77-0cH" secondAttribute="trailing" constant="50" id="ThK-jM-g3E"/>
@@ -181,7 +181,7 @@
                                                 <color key="tintColor" red="0.94409483670000005" green="0.57223051790000001" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9n-qC-HtH">
-                                                <rect key="frame" x="140" y="199.5" width="95" height="30"/>
+                                                <rect key="frame" x="100" y="199.5" width="175" height="30"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -213,9 +213,9 @@
                                             <constraint firstItem="jMT-oM-5lt" firstAttribute="top" secondItem="QCJ-Wk-AHr" secondAttribute="top" constant="40" id="Aj3-Kg-xxu"/>
                                             <constraint firstItem="6KN-gK-85b" firstAttribute="top" secondItem="jMT-oM-5lt" secondAttribute="bottom" constant="40" id="IS4-0j-IKW"/>
                                             <constraint firstItem="jMT-oM-5lt" firstAttribute="leading" secondItem="QCJ-Wk-AHr" secondAttribute="leading" constant="40" id="J8v-wQ-n8W"/>
-                                            <constraint firstItem="i9n-qC-HtH" firstAttribute="leading" secondItem="QCJ-Wk-AHr" secondAttribute="leading" constant="140" id="Lzi-uf-cm2"/>
+                                            <constraint firstItem="i9n-qC-HtH" firstAttribute="leading" secondItem="QCJ-Wk-AHr" secondAttribute="leading" constant="100" id="Lzi-uf-cm2"/>
                                             <constraint firstItem="ZF6-Fc-6GO" firstAttribute="top" secondItem="i9n-qC-HtH" secondAttribute="bottom" constant="40" id="Toe-ti-k6o"/>
-                                            <constraint firstAttribute="trailing" secondItem="i9n-qC-HtH" secondAttribute="trailing" constant="140" id="Vml-AL-DnF"/>
+                                            <constraint firstAttribute="trailing" secondItem="i9n-qC-HtH" secondAttribute="trailing" constant="100" id="Vml-AL-DnF"/>
                                             <constraint firstAttribute="trailing" secondItem="6KN-gK-85b" secondAttribute="trailing" constant="80" id="VpD-H3-6Aa"/>
                                             <constraint firstItem="ZF6-Fc-6GO" firstAttribute="leading" secondItem="QCJ-Wk-AHr" secondAttribute="leading" constant="40" id="bfK-7L-iQF"/>
                                             <constraint firstItem="6KN-gK-85b" firstAttribute="leading" secondItem="QCJ-Wk-AHr" secondAttribute="leading" constant="80" id="ca6-dd-z9b"/>
@@ -297,6 +297,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="T8e-MR-kKR"/>
+        <segue reference="wL1-aP-AwC"/>
     </inferredMetricsTieBreakers>
 </document>

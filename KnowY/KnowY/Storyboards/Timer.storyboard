@@ -26,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5H-j6-dTD">
-                                <rect key="frame" x="60" y="417" width="255" height="150"/>
+                                <rect key="frame" x="60" y="467" width="255" height="150"/>
                                 <color key="backgroundColor" red="0.94409483670000005" green="0.57223051790000001" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="yFc-Pv-7h2"/>
@@ -59,7 +59,7 @@
                             <constraint firstItem="OlH-dY-Mg1" firstAttribute="trailing" secondItem="H1D-TO-ZZ8" secondAttribute="trailing" constant="40" id="MNh-yx-TZx"/>
                             <constraint firstItem="OlH-dY-Mg1" firstAttribute="trailing" secondItem="T5H-j6-dTD" secondAttribute="trailing" constant="60" id="WnI-aV-E1h"/>
                             <constraint firstItem="H1D-TO-ZZ8" firstAttribute="top" secondItem="9TL-eL-gYi" secondAttribute="bottom" constant="20" id="im8-Ld-7md"/>
-                            <constraint firstItem="OlH-dY-Mg1" firstAttribute="bottom" secondItem="T5H-j6-dTD" secondAttribute="bottom" constant="100" id="reg-mW-sgM"/>
+                            <constraint firstItem="OlH-dY-Mg1" firstAttribute="bottom" secondItem="T5H-j6-dTD" secondAttribute="bottom" constant="50" id="reg-mW-sgM"/>
                             <constraint firstItem="H1D-TO-ZZ8" firstAttribute="leading" secondItem="OlH-dY-Mg1" secondAttribute="leading" constant="40" id="seT-uM-ojL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OlH-dY-Mg1"/>
@@ -90,13 +90,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lem-mN-PNT">
-                                <rect key="frame" x="60" y="84" width="255" height="73"/>
+                                <rect key="frame" x="60" y="84" width="255" height="173"/>
                                 <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The timer doesn't run if you quit the app, so keep it open" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7x-mM-IA5">
-                                <rect key="frame" x="40" y="197" width="295" height="120"/>
+                                <rect key="frame" x="40" y="297" width="295" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="4au-L3-UU0"/>
                                 </constraints>
@@ -104,7 +104,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myp-6k-Ntr">
-                                <rect key="frame" x="60" y="417" width="255" height="150"/>
+                                <rect key="frame" x="60" y="467" width="255" height="150"/>
                                 <color key="backgroundColor" red="0.94409483670000005" green="0.57223051790000001" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="ZFe-kC-iR3"/>
@@ -122,9 +122,9 @@
                         <constraints>
                             <constraint firstItem="k7x-mM-IA5" firstAttribute="leading" secondItem="Gj4-7P-BvP" secondAttribute="leading" constant="40" id="3mU-9U-w8e"/>
                             <constraint firstItem="Gj4-7P-BvP" firstAttribute="trailing" secondItem="lem-mN-PNT" secondAttribute="trailing" constant="60" id="8nt-HG-apy"/>
-                            <constraint firstItem="myp-6k-Ntr" firstAttribute="top" secondItem="k7x-mM-IA5" secondAttribute="bottom" constant="100" id="90r-rS-KMi"/>
+                            <constraint firstItem="myp-6k-Ntr" firstAttribute="top" secondItem="k7x-mM-IA5" secondAttribute="bottom" constant="50" id="90r-rS-KMi"/>
                             <constraint firstItem="lem-mN-PNT" firstAttribute="leading" secondItem="Gj4-7P-BvP" secondAttribute="leading" constant="60" id="Ea2-ZW-dvj"/>
-                            <constraint firstItem="Gj4-7P-BvP" firstAttribute="bottom" secondItem="myp-6k-Ntr" secondAttribute="bottom" constant="100" id="FYp-yh-JIz"/>
+                            <constraint firstItem="Gj4-7P-BvP" firstAttribute="bottom" secondItem="myp-6k-Ntr" secondAttribute="bottom" constant="50" id="FYp-yh-JIz"/>
                             <constraint firstItem="Gj4-7P-BvP" firstAttribute="trailing" secondItem="k7x-mM-IA5" secondAttribute="trailing" constant="40" id="KKF-yQ-p3O"/>
                             <constraint firstItem="lem-mN-PNT" firstAttribute="top" secondItem="Gj4-7P-BvP" secondAttribute="top" constant="20" id="Wir-SM-Pcr"/>
                             <constraint firstItem="myp-6k-Ntr" firstAttribute="leading" secondItem="Gj4-7P-BvP" secondAttribute="leading" constant="60" id="hEo-QL-iJl"/>

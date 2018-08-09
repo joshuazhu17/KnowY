@@ -173,8 +173,6 @@ extension EditGoalViewController: UITextViewDelegate {
         self.scrollView.contentInset = contentInsets
         self.scrollView.scrollIndicatorInsets = contentInsets
         
-        var aRect : CGRect = self.view.frame
-        aRect.size.height -= keyboardSize!.height
         if let activeView = self.activeView {
             if activeView == goalDescriptionTextView {
                 self.scrollView.scrollRectToVisible(activeView.frame, animated: true)
@@ -190,7 +188,7 @@ extension EditGoalViewController: UITextViewDelegate {
         self.scrollView.contentInset = contentInsets
         self.scrollView.scrollIndicatorInsets = contentInsets
         self.view.endEditing(true)
-        self.scrollView.isScrollEnabled = false
+        //self.scrollView.isScrollEnabled = false
     }
     
     //
