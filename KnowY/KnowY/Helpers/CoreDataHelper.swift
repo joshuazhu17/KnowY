@@ -62,7 +62,34 @@ struct CoreDataHelper {
         let fetchRequest = NSFetchRequest<Goal>(entityName: "Goal")
         
         do {
-            let results = try context.fetch(fetchRequest)
+            let results = try context.fetch(fetchRequest).sorted(by: { (g1, g2) -> Bool in
+                guard let date1 = g1.reminderTime else {return false}
+                guard let date2 = g2.reminderTime else {return true}
+                
+                let formatter = DateFormatter()
+                formatter.locale = Locale(identifier: "en_US_POSIX")
+                formatter.dateFormat = "H m"
+                
+                let time1 = formatter.string(from: date1).split(separator: " ").compactMap({ (s) -> Int? in
+                    return Int(s)
+                })
+                let time2 = formatter.string(from: date2).split(separator: " ").compactMap({ (s) -> Int? in
+                    return Int(s)
+                })
+                
+                if time1[0] < time2[0] {
+                    return true
+                }
+                else if time1[0] > time2[0] {
+                    return false
+                }
+                else {
+                    if time1[1] <= time2[1] {
+                        return true
+                    }
+                    return false
+                }
+            })
             return results
         } catch let error {
             print("Could not fetch: \(error.localizedDescription)")

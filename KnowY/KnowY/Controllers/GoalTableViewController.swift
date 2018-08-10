@@ -30,7 +30,6 @@ class GoalTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("HI")
         if let uuid = UserDefaults.standard.string(forKey: Constants.UserDefaults.notificationuuid) {
             for goal in goals {
                 if goal.uuid == uuid {
