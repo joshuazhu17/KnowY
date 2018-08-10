@@ -80,20 +80,28 @@ class GoalTableViewController: UITableViewController {
         
         if goal.onOff {
             cell.onOffSwitch.setOn(true, animated: true)
+            cell.timeLabel.textColor = UIColor.black
+            cell.goalNameLabel.textColor = UIColor.black
         }
         else {
             cell.onOffSwitch.setOn(false, animated: true)
+            cell.timeLabel.textColor = UIColor(red: 200.0/255.0, green: 200.0/255.0, blue: 200.0/255.0, alpha: 1)
+            cell.goalNameLabel.textColor = UIColor(red: 200.0/255.0, green: 200.0/255.0, blue: 200.0/255.0, alpha: 1)
         }
         cell.onOffSwitchedAction = { (cell: GoalTableViewCell) in
             guard let indexPath = tableView.indexPath(for: cell) else { return }
             let goal = self.goals[indexPath.row]
             
             if !cell.onOffSwitch.isOn {
+                cell.timeLabel.textColor = UIColor(red: 200.0/255.0, green: 200.0/255.0, blue: 200.0/255.0, alpha: 1)
+                cell.goalNameLabel.textColor = UIColor(red: 200.0/255.0, green: 200.0/255.0, blue: 200.0/255.0, alpha: 1)
                 goal.onOff = false
                 CoreDataHelper.saveGoal()
                 NotificationsHelper.deleteGoal(goal: goal)
             }
             else {
+                cell.timeLabel.textColor = UIColor.black
+                cell.goalNameLabel.textColor = UIColor.black
                 goal.onOff = true
                 CoreDataHelper.saveGoal()
                 guard let reminderTime = goal.reminderTime else {return}
