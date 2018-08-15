@@ -66,7 +66,8 @@ class CountdownViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        seconds = duration
+        //seconds = duration
+        seconds = 5
         timeLeftLabel.text = timeString(time: duration)
         timeLeftLabel.layer.cornerRadius = 12
         timeLeftLabel.layer.masksToBounds = true

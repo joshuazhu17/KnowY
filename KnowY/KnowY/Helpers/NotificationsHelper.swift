@@ -28,13 +28,14 @@ struct NotificationsHelper {
         
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.dateFormat = "H m"
+        formatter.dateFormat = "H m s"
         
         let timeString = formatter.string(from: date)
         let hourandminute = timeString.split(separator: " ")
         
         dateComponents.hour = Int(hourandminute[0])
         dateComponents.minute = Int(hourandminute[1])
+        dateComponents.second = Int(hourandminute[2])! + 5
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
